@@ -1,0 +1,34 @@
+# Custom quest, ID: 2014
+
+title = "Scarecrows For The Rare Snows"
+npc = "Mr. Do [Mu Lung]"
+info = """
+As the potion creator and resident meteorologist, I feel it is my duty to inform the populace that we will soon be experiencing the coldest winter in recent times.
+
+Snow here is rare, but in such inclement weather we will, in addition, have to worry about migrations of species we aren't very used to. As such our farmers will need to be prepared, both for the weather and for the foreign species. If you could go and break up #b200 Straw Target Dummies#k for me, and bring back at least #b100 of the Straw Dolls#k, we could begin the scarecrow-making process."""
+
+
+[[monsters]]
+id = 5120503
+name = "Straw Target Dummy"
+count = 200
+
+
+[[items]]
+id = 4000286
+name = "Straw Doll"
+count = 100
+
+
+[par]
+fearless = 37
+valiant = 42
+adventuresome = 47
+
+
+[rewards]
+exp = 139000
+mesos = 28250
+    [[rewards.items]]
+    id = 5220000
+    count = 4

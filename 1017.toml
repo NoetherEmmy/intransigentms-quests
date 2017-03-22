@@ -1,0 +1,50 @@
+# Custom quest, ID: 1017
+
+title = "The Geriatric And The Juvenile"
+npc = "YokoYoko [Showa Town]"
+info = """
+Yeeeaauaugauauagghuughggh~!
+
+Whhhhat're you doin' out here, sonny?
+
+I say, I say, those boys. Those boys they got me #eheeeeeeeeeeeeeeeee#n real good.
+
+Catch some've'm for me?
+
+(#b60 Extra B#k, #b40 Extra C#k, #b30 Leader A's Shades#k, and #b20 Leader B's Charm#k)"""
+
+
+[[monsters]]
+id = 9400101
+name = "Extra B"
+count = 60
+
+[[monsters]]
+id = 9400102
+name = "Extra C"
+count = 40
+
+
+[[items]]
+id = 4000092
+name = "Leader A's Shades"
+count = 30
+
+[[items]]
+id = 4000093
+name = "Leader B's Charm"
+count = 20
+
+
+[par]
+fearless = 55
+valiant = 58
+adventuresome = 62
+
+
+[rewards]
+exp = 241000
+mesos = 55555
+    [[rewards.items]]
+    id = 5220000
+    count = 3

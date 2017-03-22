@@ -1,0 +1,28 @@
+# Custom quest, ID: 2015
+
+title = "Arboricide"
+npc = "The Glimmer Man [New Leaf City]"
+info = """
+Psst. Hey.
+
+Pssssssssssssssssssssssssssssssst."""
+
+
+[[monsters]]
+id = 9400588
+name = "Phantom Tree [2]"
+count = 60
+
+
+[par]
+fearless = 48
+valiant = 55
+adventuresome = 63
+
+
+[rewards]
+exp = 250000
+mesos = 35250
+    [[rewards.items]]
+    id = 5220000
+    count = 3

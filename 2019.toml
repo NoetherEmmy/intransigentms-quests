@@ -1,0 +1,38 @@
+# Custom quest, ID: 2019
+
+title = "Busted Business Brings Breezy Brooms"
+npc = "Mr. Noh [Korean Folk Town]"
+info = """
+Well, I guess there's at least a silver lining to the whole nuclear facility debacle. Some of the #bBlins#k out east of here have started transforming... into strange, broom-producing creatures.
+
+Now, I don't have a Ph.D in biology, but I get the feeling that this is kind of a rare thing. I'd like you to go out there and get me #b100 Brooms#k from the Blins, to be safe. This place needs a lot of sweeping."""
+
+
+[requirements]
+quests = [2018]
+
+
+[[monsters]]
+id = 6130202
+name = "Morphed Blin"
+count = 68
+
+
+[[items]]
+id = 4000173
+name = "Broom"
+count = 100
+
+
+[par]
+fearless = 50
+valiant = 55
+adventuresome = 62
+
+
+[rewards]
+exp = 241000
+mesos = 39000
+    [[rewards.items]]
+    id = 5220000
+    count = 4

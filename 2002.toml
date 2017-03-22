@@ -1,0 +1,32 @@
+# Custom quest, ID: 2002
+
+title = "Tia's Makeshift Bottling Operation"
+npc = "Tia [Singapore: CBD]"
+info = """
+Oh, hey! How's it going, #h #?"""
+
+
+[[monsters]]
+id = 9420502
+name = "Biner"
+count = 42
+
+
+[[items]]
+id = 4000367
+name = "Recycle Water Bottle"
+count = 42
+
+
+[par]
+fearless = 16
+valiant = 23
+adventuresome = 26
+
+
+[rewards]
+exp = 23500
+mesos = 11100
+    [[rewards.items]]
+    id = 5220000
+    count = 3

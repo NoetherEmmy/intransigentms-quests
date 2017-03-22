@@ -1,0 +1,37 @@
+# Custom quest, ID: 2020
+
+title = "Kay Craves Ckllauwckesse"
+npc = "Kay [Omega Sector HQ: Silo]"
+info = """
+Keen to kibitz, kid? Come close; Kay's committed to confess crimes chronological."""
+
+
+[[monsters]]
+id = 8140200
+name = "Klock"
+count = 140
+
+[[monsters]]
+id = 8140300
+name = "Dark Klock"
+count = 140
+
+
+[[items]]
+id = 4000145
+name = "Sealed-Up Grandpa Clock"
+count = 70
+
+
+[par]
+fearless = 70
+valiant = 75
+adventuresome = 79
+
+
+[rewards]
+exp = 469000
+mesos = 62002
+    [[rewards.items]]
+    id = 5220000
+    count = 3

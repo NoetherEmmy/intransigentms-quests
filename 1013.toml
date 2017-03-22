@@ -1,0 +1,32 @@
+# Custom quest, ID: 1013
+
+title = "Lifeless Leaflet Lost"
+npc = "Pata [Mu Lung]"
+info = """
+Hello."""
+
+
+[[monsters]]
+id = 5120506
+name = "The Book Ghost"
+count = 90
+
+
+[[items]]
+id = 4000298
+name = "Old Paper"
+count = 90
+
+
+[par]
+fearless = 45
+valiant = 48
+adventuresome = 54
+
+
+[rewards]
+exp = 181000
+mesos = 48250
+    [[rewards.items]]
+    id = 5220000
+    count = 3

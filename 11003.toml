@@ -1,0 +1,43 @@
+# Custom quest, ID: 11003
+
+title = "Savior Of Ulu City"
+npc = "Commando Jim [Ulu City Entrance]"
+info = """
+Well.
+
+I didn't expect this day to ever come, not to mention this soon. It's time that we finally look that gargantuan fuckin' tree in its destructive eye (eyes? does it have more than one?).
+
+Personally, I'm scared witless, and Senor Silencio over here is, as usual, silent on the matter.
+
+That means it's up to you, and whoever else you can find that #ealso#n has a death wish, to confront this mean-lookin' wooden silo yourselves... and come back to us with some results.
+
+Don't worry, though -- if you can make it back alive, we've got a nifty lil' prize all ready for ya."""
+repeatable = true
+
+
+[requirements]
+quests = [11000, 11001, 11002]
+
+
+[[monsters]]
+id = 9420522
+name = "Krexel"
+count = 1
+
+
+[par]
+fearless = 125
+valiant = 140
+adventuresome = 162
+
+
+[rewards]
+exp = 19184000
+mesos = 1250000
+    [[rewards.items]]
+    id = 5220000
+    count = 8
+
+    [[rewards.items]]
+    id = 2000005
+    count = 200

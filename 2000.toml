@@ -1,0 +1,55 @@
+# Custom quest, ID: 2000
+
+title = "An Eclectic Brew, Part One"
+npc = "Malady [Kerning City]"
+info = """
+Hmmmmm mmmm...
+
+Heeheeheeheehee...
+
+HMMMM, MMMMMMMM, EEEEEEEEEEEEEEEE~
+
+#egasp#n; #eahem#n.
+
+Sorry, child. I didn't mean for you to hear tha -- wait. What are you doing here? This is my brewery, ya hear! What do you think you're doing?"""
+
+
+[[monsters]]
+id = 1210100
+name = "Pig"
+count = 25
+
+[[monsters]]
+id = 1210101
+name = "Ribbon Pig"
+count = 20
+
+[[monsters]]
+id = 1110100
+name = "Green Mushroom"
+count = 20
+
+
+[[items]]
+id = 4000006
+name = "Octopus Leg"
+count = 20
+
+[[items]]
+id = 4000012
+name = "Green Mushroom Cap"
+count = 20
+
+
+[par]
+fearless = 14
+valiant = 17
+adventuresome = 20
+
+
+[rewards]
+exp = 14000
+mesos = 10000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

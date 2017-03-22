@@ -1,0 +1,82 @@
+# Custom quest, ID: 4001
+
+title = "A Night Light Fight"
+npc = "Legor [Leafre: Forest of the Priest]"
+info = """
+Ah, man. You know, I've said it before. We are just... very low-tech here in Leafre. And, I realize we're all into that magic stuff and all, but we're running out of material for lighing around the town, and fast.
+
+Around here we teach a lot of magic things about sending down great balls for fire from the skies, shooting arrows of pure light ar your enemies, and so on. But really, we have no magic that just creates a light that will persist. We've just been using regular old non-magic fire this entire time.
+
+Luckily, we found out that some guy... by the name of #bCapt. Latanica#k? He's got a magic lantern called the #bSoul Lantern#k which we could use to light all of our lanterns magically and forever.
+
+If you could get us #b6#k of those lanterns from the Capt., I can reward you with more training."""
+
+
+[requirements]
+quests = [4000]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3121002, 20], [3221002, 20], [2121004, 20], [2221004, 20],
+        [2321004, 20], [5121003, 20], [5220001, 30], [4120002, 30],
+        [4220002, 30], [1121002, 30], [1221002, 30], [1321002, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 9420513
+name = "Capt. Latanica"
+count = 6
+
+
+[[items]]
+id = 4000385
+name = "Soul Lantern"
+count = 6
+
+
+[par]
+fearless = 98
+valiant = 120
+adventuresome = 140
+
+
+[rewards]
+exp = 6864000
+mesos = 185000
+    [[rewards.items]]
+    id = 4001126
+    count = 8
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3121002, 20], [3221002, 20], [2121004, 20], [2221004, 20],
+        [2321004, 20], [5121003, 20], [5220001, 30], [4120002, 30],
+        [4220002, 30], [1121002, 30], [1221002, 30], [1321002, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

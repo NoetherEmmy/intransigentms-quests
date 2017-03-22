@@ -1,0 +1,37 @@
+# Custom quest, ID: 2011
+
+title = "Pork Pot Pie, Please"
+npc = "Mr. Pan [Mu Lung]"
+info = """
+#estomach grumbles#n"""
+
+
+[[monsters]]
+id = 4230501
+name = "Red Porky"
+count = 56
+
+[[monsters]]
+id = 4230502
+name = "Black Porky"
+count = 56
+
+
+[[items]]
+id = 4000276
+name = "Acorn"
+count = 20
+
+
+[par]
+fearless = 34
+valiant = 38
+adventuresome = 42
+
+
+[rewards]
+exp = 101000
+mesos = 39500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

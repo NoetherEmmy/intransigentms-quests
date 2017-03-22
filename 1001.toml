@@ -1,0 +1,38 @@
+# Custom quest, ID: 1001
+
+title = "Mr. Lee's Repossession Job"
+npc = "Mr. Lee [Henesys Park]"
+info = """
+Psst. Hey.
+
+You.
+
+Come over here. You look... kinda tough, I guess. Look, I need some help. I've given out a loan to someone I can't extract the debt from -- some giant, ugly fuckin' slug by the name of #rMano#k.
+
+I want to repossess his stuff to make the debt even, but I don't think he or any of his cronies would take very kindly to me treading on their territory. So I was wondering if you could... #eahem#n subdue him, you know. Soften him up for me. It's going to be dangerous, but I can reward you handsomely."""
+
+
+[[monsters]]
+id = 2220000
+name = "Mano"
+count = 1
+
+
+[[items]]
+id = 4032101
+name = "Mano's money sack"
+count = 1
+
+
+[par]
+fearless = 12
+valiant = 15
+adventuresome = 19
+
+
+[rewards]
+exp = 7450
+mesos = 10000
+    [[rewards.items]]
+    id = 5220000
+    count = 3

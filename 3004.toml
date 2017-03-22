@@ -1,0 +1,82 @@
+# Custom quest, ID: 3004
+
+title = "Five Toes Ten Feet"
+npc = "Harmonia [Leafre: Forest of the Priest]"
+info = """
+So, there have been some rumors circulating since you left. Something about a big ol' hairy dude? With giant hairy feet? They call him Sats Kwatch. Or something like that.
+
+Anyways, he sounds dangerous, so we're senging you to investigate. If you do run into such a Sats Kwatch, make sure #bto kill him#k and bring back #b3 of his toes#k or something.
+
+Oh, and #edon't die#n."""
+
+
+[requirements]
+quests = [3000, 3001, 3002, 3003]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3220004, 30], [2121007, 30],
+        [2221007, 30], [2321008, 30],
+        [5121004, 30], [5221007, 20],
+        [4121008, 30], [1221011, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 9400575
+name = "Bigfoot"
+count = 3
+
+
+[[items]]
+id = 4032013
+name = "Bigfoot's Toe"
+count = 3
+
+
+[par]
+fearless = 128
+valiant = 132
+adventuresome = 135
+
+
+[rewards]
+exp = 5451000
+mesos = 101000
+    [[rewards.items]]
+    id = 4001126
+    count = 8
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3220004, 30], [2121007, 30],
+        [2221007, 30], [2321008, 30],
+        [5121004, 30], [5221007, 20],
+        [4121008, 30], [1221011, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

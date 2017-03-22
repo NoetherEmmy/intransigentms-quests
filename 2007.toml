@@ -1,0 +1,28 @@
+# Custom quest, ID: 2007
+
+title = "A Maid Afraid"
+npc = "Maid [Haunted House]"
+info = """
+#eshivers#n
+
+Wh -- what are you doing in here?"""
+
+
+[[monsters]]
+id = 3220000
+name = "Stumpy"
+count = 1
+
+
+[par]
+fearless = 20
+valiant = 26
+adventuresome = 35
+
+
+[rewards]
+exp = 61000
+mesos = 44000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

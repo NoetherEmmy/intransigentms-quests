@@ -1,0 +1,50 @@
+# Custom quest, ID: 8000
+
+title = "Kuku Craves Calamari"
+npc = "Mr. Park [Ellinia]"
+info = """
+#elooks around nervously#n
+
+Pssssssssst.
+
+Look, friend, I -- I need a little help here.
+
+#eyou hear a soft but deep squeaking coming from under the man's clothes#n"""
+
+
+[requirements]
+predicates = [
+    """
+    function(p) {
+        return
+            p.getLevel() >= 120 &&
+            p.getItemQuantity(1902001, true) > 0;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8141300
+name = "Squid"
+count = 200
+
+
+[[items]]
+id = 4000184
+name = "Butter-Toasted Squid"
+count = 250
+
+
+[par]
+fearless = 125
+valiant = 130
+adventuresome = 134
+
+
+[rewards]
+exp = 5207000
+mesos = 55000
+    [[rewards.items]]
+    id = 1902002
+    count = 1

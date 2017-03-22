@@ -1,0 +1,44 @@
+# Custom quest, ID: 1015
+
+title = "Kooky Cucumber Conundrum"
+npc = "Yuse [Showa Town]"
+info = """
+Pst. Hey.
+
+Think you can get me a cucumber or two?"""
+
+
+[[monsters]]
+id = 9400012
+name = "Water Goblin"
+count = 64
+
+[[monsters]]
+id = 5100004
+name = "Samiho"
+count = 14
+
+
+[[items]]
+id = 4000223
+name = "Cucumber"
+count = 64
+
+[[items]]
+id = 4000021
+name = "Leather"
+count = 14
+
+
+[par]
+fearless = 52
+valiant = 59
+adventuresome = 64
+
+
+[rewards]
+exp = 260000
+mesos = 33333
+    [[rewards.items]]
+    id = 5220000
+    count = 3

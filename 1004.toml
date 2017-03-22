@@ -1,0 +1,35 @@
+# Custom quest, ID: 1004
+
+title = "Carving Out A Sleepier Wood"
+npc = "Mr. Oh [Sleepywood]"
+info = """
+Hello. You must have heard about our plans to expand Sleepywood proper.
+
+Well, I'm your guy. You see, this little place we've get here is pretty... cozy. We want to add on some more space and buildings, but we never really took care of the very much active mushroom infestation. All of this wood from here to the edge of sleepywood in the west is fairly sleepy, but east of here --
+
+Well, it's not sleepy, that's for sure. If you'd like, I can pay you to exterminate #b45 horny mushrooms#k and #b35 zombie mushrooms#k from just east of here so we can expand."""
+
+
+[[monsters]]
+id = 2110200
+name = "Horny Mushroom"
+count = 45
+
+[[monsters]]
+id = 2230101
+name = "Zombie Mushroom"
+count = 35
+
+
+[par]
+fearless = 18
+valiant = 21
+adventuresome = 25
+
+
+[rewards]
+exp = 30500
+mesos = 25000
+    [[rewards.items]]
+    id = 5220000
+    count = 3

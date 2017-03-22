@@ -1,0 +1,42 @@
+# Custom quest, ID: 1018
+
+title = "Perfect Perfidy"
+npc = "Nana(P) [Perion]"
+info = """
+Hey honey! Where ya headed off to?"""
+
+
+[[monsters]]
+id = 7130500
+name = "Rash"
+count = 40
+
+[[monsters]]
+id = 7130501
+name = "Dark Rash"
+count = 40
+
+
+[[items]]
+id = 4000228
+name = "Anesthetic Powder"
+count = 60
+
+[[items]]
+id = 4000230
+name = "Curse Powder"
+count = 60
+
+
+[par]
+fearless = 61
+valiant = 65
+adventuresome = 72
+
+
+[rewards]
+exp = 354000
+mesos = 69696
+    [[rewards.items]]
+    id = 5220000
+    count = 4

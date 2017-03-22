@@ -1,0 +1,42 @@
+# Custom quest, ID: 1007
+
+title = "Taking Time To Task"
+npc = "Document Roll [Ludibrium Village]"
+info = """
+#eyou hear the sound of paper rustling from the floor of the house#n"""
+
+
+[[monsters]]
+id = 3230306
+name = "Chronos"
+count = 55
+
+[[monsters]]
+id = 4230113
+name = "Tick-Tock"
+count = 40
+
+
+[[items]]
+id = 4000114
+name = "Table Clock"
+count = 1
+
+[[items]]
+id = 4000113
+name = "Clock Spring"
+count = 1
+
+
+[par]
+fearless = 30
+valiant = 35
+adventuresome = 38
+
+
+[rewards]
+exp = 77000
+mesos = 21500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

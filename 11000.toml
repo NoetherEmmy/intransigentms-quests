@@ -1,0 +1,53 @@
+# Custom quest, ID: 11000
+
+title = "Entering Ulu City"
+npc = "Ralph the wanderer [Boat Quay Town]"
+endnpc = "Commando Jim [Ulu City Entrance]"
+info = """
+Hey, punk!"""
+
+
+[[monsters]]
+id = 9420515
+name = "Veetron"
+count = 50
+
+[[monsters]]
+id = 9420514
+name = "Berserkie"
+count = 50
+
+[[monsters]]
+id = 9420518
+name = "Montrecer"
+count = 30
+
+
+[[items]]
+id = 4000430
+name = "Veetron Horn"
+count = 50
+
+[[items]]
+id = 4000429
+name = "Sweat Bead"
+count = 50
+
+[[items]]
+id = 4000433
+name = "Oil Canister"
+count = 30
+
+
+[par]
+fearless = 92
+valiant = 98
+adventuresome = 103
+
+
+[rewards]
+exp = 1295000
+mesos = 800000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

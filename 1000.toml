@@ -1,0 +1,44 @@
+# Custom quest, ID: 1000
+
+title = "A Bunny Rabbit Without A Home"
+npc = "Mad Bunny [Henesys]"
+info = """
+Oh hey, #h #. I'm uh, not doing so hot right now, and I don't think I have enough material to shelter myself from the upcoming weather.
+
+If... you could bring back #b20 branches#k, as well as #b20 squishy liquids#k to stick them together so that I can have a house to live in, I'd be stoked."""
+
+
+[[monsters]]
+id = 130100
+name = "Stump"
+count = 15
+
+[[monsters]]
+id = 210100
+name = "Slime"
+count = 15
+
+
+[[items]]
+id = 4000003
+name = "Tree branch"
+count = 20
+
+[[items]]
+id = 4000004
+name = "Squishy liquid"
+count = 20
+
+
+[par]
+fearless = 8
+valiant = 11
+adventuresome = 13
+
+
+[rewards]
+exp = 5500
+mesos = 12000
+    [[rewards.items]]
+    id = 5220000
+    count = 3

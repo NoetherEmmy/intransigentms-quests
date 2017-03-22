@@ -1,0 +1,34 @@
+# Custom quest, ID: 2003
+
+title = "Vikin's Lost Mapkin"
+npc = "Vikin [Lith Harbor]"
+info = """
+God damn it. I swear that is the last time I let Jonsi look at the ma --
+
+Oi! You there! Ya got any paper on ya? Some tablecloth? Maybe?"""
+
+
+[[monsters]]
+id = 3230101
+name = "Jr. Wraith"
+count = 20
+
+
+[[items]]
+id = 4000035
+name = "Tablecloth"
+count = 25
+
+
+[par]
+fearless = 20
+valiant = 25
+adventuresome = 31
+
+
+[rewards]
+exp = 38500
+mesos = 22500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

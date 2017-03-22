@@ -1,0 +1,73 @@
+# Custom quest, ID: 10002
+
+title = "The Ensemble Of The Social Relations"
+npc = "Tory [Henesys Park]"
+info = """
+...
+
+Hey, kiddo.
+
+#elooks visibly depressed#n"""
+repeatable = true
+
+
+[requirements]
+predicates = [
+    """
+    var thisQuest = 10002;
+    var otherQuests = [10000, 10001, 10003];
+
+    function(p) {
+        if (!p.completedCQuest(thisQuest)) return true;
+        for (var i = 0; i < otherQuests.length; ++i) {
+            if (!p.completedCQuest(otherQuests[i])) return false;
+        }
+        return true;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 9400574
+name = "Typhon"
+count = 200
+
+[[monsters]]
+id = 9400573
+name = "Baby Typhon"
+count = 100
+
+
+[[items]]
+id = 4032005
+name = "Typhon Feather"
+count = 30
+
+[[items]]
+id = 4011008
+name = "Lidium"
+count = 3
+
+[[items]]
+id = 4010005
+name = "Orihalcon Ore"
+count = 25
+
+
+[par]
+fearless = 100
+valiant = 111
+adventuresome = 121
+
+
+[rewards]
+exp = 2882000
+mesos = 96000
+    [[rewards.items]]
+    id = 4032134
+    count = 2
+
+    [[rewards.items]]
+    id = 5220000
+    count = 3

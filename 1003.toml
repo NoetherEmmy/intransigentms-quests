@@ -1,0 +1,37 @@
+# Custom quest, ID: 1003
+
+title = "A Certain Illicit Substance"
+npc = "Shane [Ellinia]"
+info = """
+Psst. Hey, kid. You're not high, are you?"""
+
+
+[[monsters]]
+id = 2220100
+name = "Blue Mushroom"
+count = 20
+
+
+[[items]]
+id = 4000009
+name = "Blue Mushroom Cap"
+count = 30
+
+[[items]]
+id = 2022000
+name = "Pure Water"
+count = 5
+
+
+[par]
+fearless = 16
+valiant = 20
+adventuresome = 24
+
+
+[rewards]
+exp = 22000
+mesos = 10000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

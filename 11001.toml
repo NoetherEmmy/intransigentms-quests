@@ -1,0 +1,50 @@
+# Custom quest, ID: 11001
+
+title = "Pushing Forward In Ulu City"
+npc = "Commando Jim [Ulu City Entrance]"
+info = """
+#estops fiddling around with gun for a second#n
+
+I saw whatcha did out there, son. That was damn near expert wranglin', if I do say so myself.
+
+Whaddaya say maybe... you could join the #e#rULCER#k#n?"""
+
+
+[requirements]
+quests = [11000]
+
+
+[[monsters]]
+id = 9420516
+name = "Slygie"
+count = 100
+
+[[monsters]]
+id = 9420517
+name = "Petrifighter"
+count = 100
+
+
+[[items]]
+id = 4000431
+name = "Slygie Tail"
+count = 100
+
+[[items]]
+id = 4000432
+name = "Moss Rock"
+count = 100
+
+
+[par]
+fearless = 100
+valiant = 109
+adventuresome = 116
+
+
+[rewards]
+exp = 2302000
+mesos = 950000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

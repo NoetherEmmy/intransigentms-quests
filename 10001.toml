@@ -1,0 +1,79 @@
+# Custom quest, ID: 10001
+
+title = "Nous Tendons A Separer Toute Espece De Propriete d'Avec Toute Espece De Travail"
+npc = "Mike [Perion Dungeon Entrance]"
+info = """
+#esnoring#n"""
+repeatable = true
+
+
+[requirements]
+predicates = [
+    """
+    var thisQuest = 10001;
+    var otherQuests = [10000, 10002, 10003];
+
+    function(p) {
+        if (!p.completedCQuest(thisQuest)) return true;
+        for (var i = 0; i < otherQuests.length; ++i) {
+            if (!p.completedCQuest(otherQuests[i])) return false;
+        }
+        return true;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8140703
+name = "Brexton"
+count = 60
+
+[[monsters]]
+id = 8190003
+name = "Skelegon"
+count = 50
+
+[[monsters]]
+id = 8142100
+name = "Risell Squid"
+count = 35
+
+
+[[items]]
+id = 1040122
+name = "Black Neos"
+count = 1
+
+[[items]]
+id = 1060111
+name = "Black Neos Pants"
+count = 1
+
+[[items]]
+id = 1002377
+name = "Green Valhalla Helmet"
+count = 1
+
+[[items]]
+id = 1072220
+name = "Green Crescent Boots"
+count = 1
+
+
+[par]
+fearless = 93
+valiant = 99
+adventuresome = 106
+
+
+[rewards]
+exp = 1477000
+mesos = 97000
+    [[rewards.items]]
+    id = 4032134
+    count = 2
+
+    [[rewards.items]]
+    id = 5220000
+    count = 3

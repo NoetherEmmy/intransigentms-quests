@@ -1,0 +1,36 @@
+# Custom quest, ID: 1009
+
+title = "Playing The Mercurial Mercenary"
+npc = "Wisp [Ludibrium: Eos Tower Entrance]"
+info = """
+#efpt, fpt, fpt#n"""
+
+
+[requirements]
+quests = [1008]
+
+
+[[monsters]]
+id = 3210203
+name = "Panda Teddy"
+count = 100
+
+
+[[items]]
+id = 4000108
+name = "Panda Doll"
+count = 45
+
+
+[par]
+fearless = 36
+valiant = 40
+adventuresome = 44
+
+
+[rewards]
+exp = 116000
+mesos = 32500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

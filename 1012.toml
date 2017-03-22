@@ -1,0 +1,37 @@
+# Custom quest, ID: 1012
+
+title = "Suddenly Selecting A Side"
+npc = "Seppy [Ludibrium]"
+info = """
+Hey! You! Right there!
+
+Yes, you!"""
+
+
+[requirements]
+quests = [1008, 1009]
+
+
+[[monsters]]
+id = 5220003
+name = "Timer"
+count = 1
+
+[[monsters]]
+id = 6230400
+name = "Soul Teddy"
+count = 2
+
+
+[par]
+fearless = 49
+valiant = 55
+adventuresome = 60
+
+
+[rewards]
+exp = 224000
+mesos = 21750
+    [[rewards.items]]
+    id = 5220000
+    count = 3

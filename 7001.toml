@@ -1,0 +1,66 @@
+# Custom quest, ID: 7001
+
+title = "And The Dead Shall Rise Once More"
+npc = "Gritto [Leafre: Forest of the Priest]"
+info = """
+Well, then. I do suppose you're that much closer to being a God, then, aren't you?
+
+Lucky for you I've got just the thing if taking control over life and death is your thing.
+
+But you'll need to prove yourself to me -- I don't just hand it out to no one; and in addition, you'll need to get yourself acquainted with the undead.
+
+Go out and fight for me #b274 Grim Phantom Watches#k and #b1 Griffey#k, and bring me back exactly #b2 Manon's Tails#k and #b1 Mouse#k from the #rPhysical Fitness Challenge#k. Mr. Oh can take you to that one."""
+
+
+[requirements]
+quests = [7000]
+predicates = [
+    """
+    function(p) {
+        return p.getJob().getId() === 232;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8143000
+name = "Grim Phantom Watch"
+count = 274
+
+[[monsters]]
+id = 8180001
+name = "Griffey"
+count = 1
+
+
+[[items]]
+id = 4000235
+name = "Manon's Tail"
+count = 2
+
+[[items]]
+id = 4031542
+name = "Mouse"
+count = 1
+
+
+[par]
+fearless = 127
+valiant = 133
+adventuresome = 139
+
+
+[rewards]
+exp = 6554000
+mesos = 112500
+    [[rewards.items]]
+    id = 4001126
+    count = 7
+consumers = [
+    """
+    function(p) {
+        p.setMasterLevel(2321006, 10);
+    }
+    """
+]

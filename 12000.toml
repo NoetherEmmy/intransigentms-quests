@@ -1,0 +1,60 @@
+# Custom quest, ID: 12000
+
+title = "The One Who Wants To Walk Down Memory Lane"
+npc = "Temple Keeper [Time Lane: Three Doors]"
+info = """
+#eappears to be reading from an old, crusty scroll in his hand#n
+
+#eadjusts his glasses slightly#n
+
+Hmmm... you look vaguely like a human. Come. Come hither."""
+
+
+[requirements]
+predicates = [
+    """
+    function(p) {
+        return p.getLevel() >= 90;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 100100
+name = "Snail"
+count = 100
+
+[[monsters]]
+id = 100101
+name = "Blue Snail"
+count = 100
+
+[[monsters]]
+id = 120100
+name = "Shroom"
+count = 100
+
+[[monsters]]
+id = 130100
+name = "Stump"
+count = 100
+
+[[monsters]]
+id = 1210102
+name = "Orange Mushroom"
+count = 60
+
+
+[par]
+fearless = 90
+valiant = 100
+adventuresome = 110
+
+
+[rewards]
+exp = 2200000
+mesos = 82000
+    [[rewards.items]]
+    id = 5220000
+    count = 5

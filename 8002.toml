@@ -1,0 +1,54 @@
+# Custom quest, ID: 8002
+
+title = "Gold Gets Grimy Given A Greedy Grip"
+npc = "Mr. Moneybags [Henesys]"
+info = """
+#esigh#n
+
+I've been giving out gold pieces and trinkets for New Year's for... god knows how many new years.
+
+As of late I've been... a bit more attached, you might say, to the pieces that I find than is usual. I've been taking them with me everywhere -- and I mean everywhere. My pockets are heavy and my palms are sweaty with the weight of these
+
+\t\t#edelicious#n
+
+golden pieces of light. So much so that they're not really... "golden pieces of light" anymore. In fact, I'm not so sure they've got much value anymore. I sure don't think anyone will want them when they see them.
+
+Problem is, there's only so much gold around. I don't just pull the stuff out of thin air, you know, the way I try to make it appear. I need some good chunks, seeing as New Year's is so soon.
+
+Do you think you could get me #b2 Golden Ancient Shields#k and #b3 Golden Moles#k for me? I have a giant bird to give you in return, if you like."""
+
+
+[requirements]
+quests = [8000, 8001]
+predicates = [
+    """
+    function(p) {
+        return p.getLevel() >= 120;
+    }
+    """
+]
+
+
+[[items]]
+id = 1092017
+name = "Gold Ancient Shield"
+count = 2
+
+[[items]]
+id = 1422005
+name = "Golden Mole"
+count = 3
+
+
+[par]
+fearless = 250
+valiant = 999
+adventuresome = 999
+
+
+[rewards]
+exp = 3684000
+mesos = 69000
+    [[rewards.items]]
+    id = 1902006
+    count = 1

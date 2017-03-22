@@ -1,0 +1,54 @@
+# Custom quest, ID: 2001
+
+title = "An Eclectic Brew, Part Two: Eclectic Brewgaloo"
+npc = "Malady [Kerning City]"
+info = """
+#eSchniff#n, #esniff#n, #esniff#n...
+
+I can smell you from a mile away, kid. Get over here.
+
+Heeheehee!
+
+I need more components, ya hear? If you don't mind, you could maybe get me... #b20 Bubbling's Large Bubbles#k, #b15 Seedlings#k, and kill for me #b10 Blue Mushrooms#k and #b10 Wooden Masks#k.
+
+Heehee~! Good luck!"""
+
+
+[requirements]
+quests = [2000]
+
+
+[[monsters]]
+id = 2220100
+name = "Blue Mushroom"
+count = 10
+
+[[monsters]]
+id = 2230110
+name = "Wooden Mask"
+count = 10
+
+
+[[items]]
+id = 4000037
+name = "Bubbling's Large Bubble"
+count = 20
+
+[[items]]
+id = 4000195
+name = "Seedling"
+count = 15
+
+
+[par]
+fearless = 16
+valiant = 21
+adventuresome = 24
+
+
+[rewards]
+exp = 17050
+mesos = 11000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

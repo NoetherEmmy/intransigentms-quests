@@ -1,0 +1,45 @@
+# Custom quest, ID: 2016
+
+title = "A White Lie, A White Fib, And A Few White Ribs"
+npc = "Cesar [Perion]"
+info = """
+Hey, kid. Think you can help me out?
+
+Alright, listen up. So, the other day, boss man was talking to me about the skeleton people out east from here. You know those guys. Real bony, no flesh, stuff like that.
+
+Well boss man takes a bit more dislike to them than most. I told him, they don't hurt no one -- what exactly's the problem? He tells me they're some kind of blight on the town. Like they make us look bad or something. But I ain't never heard of a tourist lining up to enter #ePerion#n.
+
+And trust me, I was not about ready to hike all the way out there just to get rid of the bone people. So I maybe fibbed a little... just told him that they had been mostly wiped out by the wooden plank people anyways. I thought that had cut it, until just today he tells me he's going out there to check on the state of things.
+
+But by then he had already got something else for me to do -- there's no way I can beat him to it and go out there and get rid of at least some of the bone people. So I need you to go out there and slay at least #b40 Skeleton Soldiers#k, #b90 Mummydogs#k, and bring me back #b30 Ribs#k so I have something to "prove" I went out there and took care of business."""
+
+
+[[monsters]]
+id = 5150001
+name = "Skeleton Soldier"
+count = 40
+
+[[monsters]]
+id = 4230126
+name = "Mummydog"
+count = 90
+
+
+[[items]]
+id = 4000206
+name = "Rib"
+count = 30
+
+
+[par]
+fearless = 48
+valiant = 53
+adventuresome = 57
+
+
+[rewards]
+exp = 201000
+mesos = 36750
+    [[rewards.items]]
+    id = 5220000
+    count = 3

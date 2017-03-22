@@ -1,0 +1,43 @@
+# Custom quest, ID: 2017
+
+title = "King Commander Cartilage Crashing the Keep"
+npc = "Cesar [Perion]"
+info = """
+Hey, um, sorry about this, but, I might have steered you a #elittle#n wrongly last time we met.
+
+You see, when I told you to go out there and get rid of all of those Mummydogs it might have been a teensy bit over the line. The unfortunate consequence is that #rKing Commander Cartilage of Keratin Keep#k is now a little pissed... I heard he plans to crash Perion.
+
+That can't happen. We need to crash Keratin Keep before they can even get started, or Perion is going to be a couple rock-dust piles and a couple of fuckin' bone people.
+
+You're going to need to kill #b60 Commander Skeletons#k and #b60 Officer Skeletons#k, and bring back #b30 Horse Skulls#k so we have something to scare 'em away with."""
+
+
+[[monsters]]
+id = 7130103
+name = "Commander Skeleton"
+count = 60
+
+[[monsters]]
+id = 6230602
+name = "Officer Skeleton"
+count = 60
+
+
+[[items]]
+id = 4000208
+name = "Horse Skull"
+count = 30
+
+
+[par]
+fearless = 62
+valiant = 67
+adventuresome = 71
+
+
+[rewards]
+exp = 340000
+mesos = 32750
+    [[rewards.items]]
+    id = 5220000
+    count = 4

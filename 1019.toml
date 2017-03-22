@@ -1,0 +1,49 @@
+# Custom quest, ID: 1019
+
+title = "Freeze Peach"
+npc = "Mr. Wang [Perion]"
+info = """
+#emumbles to self#n
+
+hmpgghhgod damn Dances with Balrogdjs piece of shitegkgojriger got your peaches right here--"""
+
+
+[[monsters]]
+id = 6230600
+name = "Ice Drake"
+count = 50
+
+[[monsters]]
+id = 6130207
+name = "Peach Monkey"
+count = 80
+
+[[monsters]]
+id = 9420512
+name = "Mr. Anchor"
+count = 60
+
+
+[[items]]
+id = 4000282
+name = "Peach Seed"
+count = 180
+
+[[items]]
+id = 4000381
+name = "White Essence"
+count = 60
+
+
+[par]
+fearless = 59
+valiant = 64
+adventuresome = 70
+
+
+[rewards]
+exp = 327000
+mesos = 61001
+    [[rewards.items]]
+    id = 5220000
+    count = 4

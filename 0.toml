@@ -1,0 +1,11 @@
+# Custom quest, ID: 0 [null quest]
+
+title = ""
+npc = ""
+info = """
+"""
+
+
+[rewards]
+exp = 0
+mesos = 0

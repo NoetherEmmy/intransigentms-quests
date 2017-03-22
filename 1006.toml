@@ -1,0 +1,37 @@
+# Custom quest, ID: 1006
+
+title = "A Shortage Of Shooting Subjects"
+npc = "Shulynch [The Nautilus: Training Room]"
+info = """
+Hey, you. You here for the shooting range?"""
+
+
+[[monsters]]
+id = 9400001
+name = "Fire Raccoon"
+count = 45
+
+
+[[items]]
+id = 4000065
+name = "Raccoon Firewood"
+count = 45
+
+[[items]]
+id = 1312013
+name = "Green Paint Brush"
+count = 1
+
+
+[par]
+fearless = 25
+valiant = 28
+adventuresome = 33
+
+
+[rewards]
+exp = 86500
+mesos = 29500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

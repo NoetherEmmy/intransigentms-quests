@@ -1,0 +1,52 @@
+# Custom quest, ID: 1011
+
+title = "Homes For The Homeless And Blocks For The Blockless"
+npc = "Geanie [Ludibrium]"
+info = """
+Hey, uh, what's your name...? #h #? #bMad Bunny#k told me that you helped him out a while back with getting a new home.
+
+You see, here in Ludibrium, we don't have quite the luxury that a lot of locales do in procuring materials for buildings. It's pretty much just lego blocks. I mean, to be honest, we tried making houses out of cogs from the Chronoi in the Toy Factory's underground, but that didn't really pan out. Let's just say they rust more quickly than you'd think.
+
+Problem is, lately the #bBlock Golems#k have been getting in our way. Typically we send down excavation teams into the #bEos Tower#k, and they bring back some lego blocks. Unfortunately, any supplies not already extracted lie beyond the point that the Block Golems normally guard. So if you wouldn't mind, we need someone who can go down there and show the Block Golems what for, and maybe bring back some of their bodies too. They are made out of blocks, after all.
+
+#b95 Yellow Toy Blocks#k, and #b95 Blue Toy Blocks#k should do the trick."""
+
+
+[requirements]
+quests = [1000]
+
+
+[[monsters]]
+id = 4230109
+name = "Block Golem"
+count = 95
+
+[[monsters]]
+id = 4230110
+name = "King Block Golem"
+count = 95
+
+
+[[items]]
+id = 4000101
+name = "Yellow Toy Block"
+count = 95
+
+[[items]]
+id = 4000102
+name = "Blue Toy Block"
+count = 95
+
+
+[par]
+fearless = 38
+valiant = 42
+adventuresome = 47
+
+
+[rewards]
+exp = 139000
+mesos = 14750
+    [[rewards.items]]
+    id = 5220000
+    count = 4

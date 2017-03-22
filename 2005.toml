@@ -1,0 +1,44 @@
+# Custom quest, ID: 2005
+
+title = "Mister Kim's Stone Safe Storage"
+npc = "Mr. Kim [Lith Harbor]"
+info = """
+Hm? A--are you here for the new
+
+#e#rSuper Secure Stone Safe Storage Service#k#n?"""
+
+
+[[monsters]]
+id = 5130101
+name = "Stone Golem"
+count = 5
+
+[[monsters]]
+id = 4230103
+name = "Iron Hog"
+count = 2
+
+
+[[items]]
+id = 4000022
+name = "Stone Golem Rubble"
+count = 10
+
+[[items]]
+id = 4000039
+name = "Iron Hog's Metal Hoof"
+count = 3
+
+
+[par]
+fearless = 27
+valiant = 33
+adventuresome = 37
+
+
+[rewards]
+exp = 57500
+mesos = 19000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

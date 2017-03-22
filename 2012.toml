@@ -1,0 +1,41 @@
+# Custom quest, ID: 2012
+
+title = "A Bit Slim On The Snake Skins"
+npc = "Lilishu [Mu Lung]"
+info = """
+Oh! Hi #h #! I was hoping someone would come by soon.
+
+You see, when I dye people's hair here, I need to use some kind of leathery material to hold the dye mixture in as it settles, but I've come to nearly run out of them since these ones wear out so quickly.
+
+Snake skins work even better, but the snakes out here are fearsome--I certainly couldn't go out there myself. If you could, could you bring me back #b110 Snake Leathers#k? Thank you!"""
+
+
+[[monsters]]
+id = 4230503
+name = "Blue Flower Serpent"
+count = 50
+
+[[monsters]]
+id = 4230504
+name = "Red Flower Serpent"
+count = 50
+
+
+[[items]]
+id = 4000281
+name = "Snake Leather"
+count = 110
+
+
+[par]
+fearless = 35
+valiant = 39
+adventuresome = 45
+
+
+[rewards]
+exp = 123000
+mesos = 27500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

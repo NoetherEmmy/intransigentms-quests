@@ -1,0 +1,47 @@
+# Custom quest, ID: 2013
+
+title = "A Tried And True Temperate Tea"
+npc = "Mr. Gong [Herb Town]"
+info = """
+G'oh! Hey! Ginseng?"""
+
+
+[[monsters]]
+id = 4230506
+name = "Ginseng Jar"
+count = 60
+
+[[monsters]]
+id = 5120501
+name = "Bellflower Root"
+count = 10
+
+[[monsters]]
+id = 5120502
+name = "Sr. Bellflower Root"
+count = 5
+
+
+[[items]]
+id = 4000292
+name = "Ginseng-Boiled Water"
+count = 60
+
+[[items]]
+id = 4000293
+name = "Bellflower"
+count = 10
+
+
+[par]
+fearless = 43
+valiant = 47
+adventuresome = 52
+
+
+[rewards]
+exp = 168000
+mesos = 19750
+    [[rewards.items]]
+    id = 5220000
+    count = 3

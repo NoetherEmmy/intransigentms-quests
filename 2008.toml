@@ -1,0 +1,46 @@
+# Custom quest, ID: 2008
+
+title = "A Winter Wish For Warm Wool"
+npc = "Mr. Mohammed [El Nath Market]"
+info = """
+I suppose this is the day I regret moving my business here. It's been frigid the entire time I've been here, but I've never truly frozen my ass off.
+
+At least, until now. Winter's come upon us, and quite frankly I'm astonished at your own choice of attire -- aren't you bloody cold? Anyways, that's not what I'm here to ask you. I need your help.
+
+If you can bring here to me #b40 Leatty Furballs#k and #b40 Dark Leatty Furballs#k so I can make myself some even warmer clothing, I can reward you."""
+
+
+[[monsters]]
+id = 5300000
+name = "Leatty"
+count = 40
+
+[[monsters]]
+id = 5300001
+name = "Dark Leatty"
+count = 40
+
+
+[[items]]
+id = 4000086
+name = "Leatty Furball"
+count = 40
+
+[[items]]
+id = 4000087
+name = "Dark Leatty Furball"
+count = 40
+
+
+[par]
+fearless = 28
+valiant = 32
+adventuresome = 36
+
+
+[rewards]
+exp = 66000
+mesos = 23500
+    [[rewards.items]]
+    id = 5220000
+    count = 2

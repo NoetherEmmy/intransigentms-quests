@@ -1,0 +1,39 @@
+# Custom quest, ID: 1014
+
+title = "Dermatological Deer Dust"
+npc = "Naran [Mu Lung]"
+info = """
+Hey, #h #!
+
+#esigh#n
+
+Ugh, sorry. I can't give you any dermatological services today, if that's what you came here for. I ran out of one of my crucial ingredients -- #bDeer Horn Dust#k -- and without it, well, let's just say your skin won't look that much better. It's pretty expensive though...
+
+Say. You don't mind, maybe, going out there where the
+#bReindeer#k are and bringing me back #b60#k of their #bBroken Deer Horns#k, do you?"""
+
+
+[[monsters]]
+id = 5120505
+name = "Reindeer"
+count = 60
+
+
+[[items]]
+id = 4000288
+name = "Broken Deer Horn"
+count = 60
+
+
+[par]
+fearless = 47
+valiant = 53
+adventuresome = 58
+
+
+[rewards]
+exp = 208000
+mesos = 38250
+    [[rewards.items]]
+    id = 5220000
+    count = 3

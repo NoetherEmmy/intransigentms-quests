@@ -1,0 +1,103 @@
+# Custom quest, ID: 3001
+
+title = "You Can't Make An Armlet Without Breaking A Few Eggs"
+npc = "Harmonia [Leafre: Forest of the Priest]"
+info = """
+Welcome back. Thank you so much, again, for killing those baddy-bad time-guys down there in Ludibrium. We really appreciate it.
+
+There was, umm, one important thing that I #emay#n have left out when I sent you on that first mission. Uh, you see, the time-guys down there weren't actually... doing any training of humans or anything. I kind of, lied, I guess, about that part. Uhm.
+
+#esigh#n
+
+Really, we just wanted their armlets so we could harvest the powers that they have and use it to make ourselves more powerful. I know, sounds selfish.
+
+But hey, don't they have, like, a saying in your language? Goes something like... "You can't make an armlet without breaking a few eggs."
+
+Something like that. Anyways, we need to make this armlet, so we need you to collect for us #b100 Egg Shells#k, #b90 Broken Horns#k, and kill for us #b130 Skelosaura#k and #b150 Red Dragon Turtles#k.
+"""
+
+
+[requirements]
+quests = [3000]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3120005, 30], [3221007, 30],
+        [2121002, 30], [2221002, 30],
+        [2321008, 20], [5121007, 30],
+        [5221004, 20], [4121007, 20],
+        [4221001, 30], [1121006, 30],
+        [1221007, 30], [1321003, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8190004
+name = "Skelosaurus"
+count = 130
+
+[[monsters]]
+id = 8140701
+name = "Red Dragon Turtle"
+count = 150
+
+
+[[items]]
+id = 4000272
+name = "Egg Shell"
+count = 100
+
+[[items]]
+id = 4000274
+name = "Broken Horn"
+count = 90
+
+
+[par]
+fearless = 125
+valiant = 130
+adventuresome = 136
+
+
+[rewards]
+exp = 5708000
+mesos = 119999
+    [[rewards.items]]
+    id = 4001126
+    count = 7
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3120005, 30], [3221007, 30],
+        [2121002, 30], [2221002, 30],
+        [2321008, 20], [5121007, 30],
+        [5221004, 20], [4121007, 20],
+        [4221001, 30], [1121006, 30],
+        [1221007, 30], [1321003, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

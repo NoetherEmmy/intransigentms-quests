@@ -1,0 +1,54 @@
+# Custom quest, ID: 12002
+
+title = "Onward Unto Oblivion"
+npc = "Temple Keeper [Time Lane: Three Doors]"
+info = """
+#ethe old man slowly takes off his spectacles#n
+
+I didn't think I would ever... be telling you this. Remember what I said about being #bthe laundromat of memory#k?
+
+Well, it's possible that the amount of memory I had you #ekill off#n last time we met was a bit excessive. We're fresh out of washing powder."""
+
+
+[requirements]
+quests = [12000, 12001]
+
+
+[[monsters]]
+id = 8200005
+name = "Qualm Monk"
+count = 200
+
+[[monsters]]
+id = 8200006
+name = "Qualm Monk Trainee"
+count = 200
+
+[[monsters]]
+id = 8200007
+name = "Qualm Guardian"
+count = 200
+
+[[monsters]]
+id = 8200008
+name = "Chief Qualm Guardian"
+count = 200
+
+[[monsters]]
+id = 8220005
+name = "Lilynouch"
+count = 1
+
+
+[par]
+fearless = 100
+valiant = 107
+adventuresome = 115
+
+
+[rewards]
+exp = 2201000
+mesos = 190000
+    [[rewards.items]]
+    id = 5220000
+    count = 5

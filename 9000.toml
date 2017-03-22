@@ -1,0 +1,54 @@
+# Custom quest, ID: 9000
+
+title = "Neve Never Knew His Nascent Knack For Nosh 'Till Now"
+npc = "Neve [Orbis Park]"
+info = """
+Hey, kid. Y'know what I'm thinkin'?
+
+I can't do this shit anymore. I am just terrible at making shoes -- I can't even put the soles in right, man. The whole shoe just fuckin' falls apart!
+
+Plus, I don't even like shoes, dude.
+I just want to #emake food#n. No one ever took me seriously when I said stuff like that though, with #r#eThe Chef#n#k having monopolized the entire fuckin' culinary industry for gods know how long...
+
+Say. Do you think you could, I dunno, get me started? All I need is -- let's see...
+
+        #b20 Honey#k,
+        #b80 Rambutans#k,
+        a delicious #b45 Octopodes#k,
+        and #b25 Jr. Neckis#k, for sealing food."""
+
+
+[[monsters]]
+id = 2130103
+name = "Jr. Necki"
+count = 25
+
+[[monsters]]
+id = 1120100
+name = "Octopus"
+count = 45
+
+
+[[items]]
+id = 2010005
+name = "Honey"
+count = 20
+
+[[items]]
+id = 2022209
+name = "Rambutan"
+count = 80
+
+
+[par]
+fearless = 20
+valiant = 28
+adventuresome = 35
+
+
+[rewards]
+exp = 61000
+mesos = 40000
+    [[rewards.items]]
+    id = 5220000
+    count = 3

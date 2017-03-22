@@ -1,0 +1,302 @@
+# Custom quest, ID: 4000
+
+title = "A Big, Brotherly Banquet"
+npc = "Legor [Leafre: Forest of the Priest]"
+info = """
+So, you heard? We're having a banquet.
+
+You know, to celebrate your becoming so incredibly powerful, and eventually taking over the world, ruling the Maple realm as your royal subject, etc....
+
+So, we need a few things, and we figured that with your oh-so-great new powers you could go fetch a few of them for us. All we really need from you is:
+
+#b50 Salads, 20 Red Bean Porridges, 5 Elixirs, 30 Power Elixirs, 30 Orange Pills, 20 Watermelons, 40 Ice Cream Pops, 10 Red Bean Sundaes, 5 Pain Relievers, 20 Ginger Ales, 50 Barbarian Elixirs, 15 Apples, 20 Meats, 25 Eggs, 5 Oranges, 20 Green Apples, 60 Sap of Ancient Trees, 30 Salads, 25 Pizzas, 30 Hamburgers, 15 Hot Dogs, 15 Hot Dog Supremes, 20 Grape Juices, 5 Melting Cheeses, 30 Sunrise Dews, 40 Chocolates, 5 Red Bean Porridges, 10 Ciders, 20 Unagis, 20 Sushi(salmon)s, 15 Dangos, 15 Mushroom Miso Ramens, 20 Kinoko Ramen(salt)s, 20 Fish Cake(dish)s, 10 Yakisobas, 25 Fried shrimps, 40 Baby Dragon Foods, 20 Desert Mists, 20 Grilled Cheeses, 50 Cherry Pies, 1 Supreme Pizzas, 30 Mapleades, 5 Chicken Rices, 10 Dragon Fruits, 20 Chili Crabs, and 15 Coconut Juices.#k
+
+Yeah, that should do it."""
+
+
+[requirements]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [1121000, 20], [1221000, 20], [1321000, 20], [2121000, 20],
+        [2221000, 20], [2321000, 20], [3121000, 20], [3221000, 20],
+        [4121000, 20], [4221000, 20], [5121000, 20], [5221000, 20]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[items]]
+id = 2020000
+name = "Salad"
+count = 50
+
+[[items]]
+id = 2022001
+name = "Red Bean Porridge"
+count = 20
+
+[[items]]
+id = 2000004
+name = "Elixir"
+count = 5
+
+[[items]]
+id = 2000005
+name = "Power Elixir"
+count = 30
+
+[[items]]
+id = 2000008
+name = "Orange Pill"
+count = 30
+
+[[items]]
+id = 2001000
+name = "Watermelon"
+count = 20
+
+[[items]]
+id = 2001001
+name = "Ice Cream Pop"
+count = 40
+
+[[items]]
+id = 2001002
+name = "Red Bean Sundae"
+count = 10
+
+[[items]]
+id = 2002011
+name = "Pain Reliever"
+count = 5
+
+[[items]]
+id = 2002023
+name = "Ginger Ale"
+count = 20
+
+[[items]]
+id = 2002025
+name = "Barbarian Elixir"
+count = 50
+
+[[items]]
+id = 2010000
+name = "Apple"
+count = 15
+
+[[items]]
+id = 2010001
+name = "Meat"
+count = 20
+
+[[items]]
+id = 2010002
+name = "Egg"
+count = 25
+
+[[items]]
+id = 2010003
+name = "Orange"
+count = 5
+
+[[items]]
+id = 2010009
+name = "Green Apple"
+count = 20
+
+[[items]]
+id = 2012002
+name = "Sap of Ancient Tree"
+count = 60
+
+[[items]]
+id = 2020000
+name = "Salad"
+count = 30
+
+[[items]]
+id = 2020003
+name = "Pizza"
+count = 25
+
+[[items]]
+id = 2020004
+name = "Hamburger"
+count = 30
+
+[[items]]
+id = 2020005
+name = "Hot Dog"
+count = 15
+
+[[items]]
+id = 2020006
+name = "Hot Dog Supreme"
+count = 15
+
+[[items]]
+id = 2020010
+name = "Grape Juice"
+count = 20
+
+[[items]]
+id = 2020012
+name = "Melting Cheese"
+count = 5
+
+[[items]]
+id = 2020014
+name = "Sunrise Dew"
+count = 30
+
+[[items]]
+id = 2020028
+name = "Chocolate"
+count = 40
+
+[[items]]
+id = 2022001
+name = "Red Bean Porridge"
+count = 5
+
+[[items]]
+id = 2022002
+name = "Cider"
+count = 10
+
+[[items]]
+id = 2022003
+name = "Unagi"
+count = 20
+
+[[items]]
+id = 2022013
+name = "Sushi(salmon)"
+count = 20
+
+[[items]]
+id = 2022014
+name = "Dango"
+count = 15
+
+[[items]]
+id = 2022015
+name = "Mushroom Miso Ramen"
+count = 15
+
+[[items]]
+id = 2022020
+name = "Kinoko Ramen(salt)"
+count = 20
+
+[[items]]
+id = 2022022
+name = "Fish Cake(dish)"
+count = 20
+
+[[items]]
+id = 2022026
+name = "Yakisoba"
+count = 10
+
+[[items]]
+id = 2022041
+name = "Fried shrimp"
+count = 25
+
+[[items]]
+id = 2022089
+name = "Baby Dragon Food"
+count = 40
+
+[[items]]
+id = 2022155
+name = "Desert Mist"
+count = 20
+
+[[items]]
+id = 2022189
+name = "Grilled Cheese"
+count = 20
+
+[[items]]
+id = 2022190
+name = "Cherry Pie"
+count = 50
+
+[[items]]
+id = 2022191
+name = "Supreme Pizza"
+count = 1
+
+[[items]]
+id = 2022195
+name = "Mapleade"
+count = 30
+
+[[items]]
+id = 2022206
+name = "Chicken Rice"
+count = 5
+
+[[items]]
+id = 2022210
+name = "Dragon Fruit"
+count = 10
+
+[[items]]
+id = 2022215
+name = "Chili Crab"
+count = 20
+
+[[items]]
+id = 2022258
+name = "Coconut Juice"
+count = 15
+
+
+[par]
+fearless = 150
+valiant = 160
+adventuresome = 170
+
+
+[rewards]
+exp = 26000000
+mesos = 144000
+    [[rewards.items]]
+    id = 4001126
+    count = 9
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [1121000, 20], [1221000, 20], [1321000, 20], [2121000, 20],
+        [2221000, 20], [2321000, 20], [3121000, 20], [3221000, 20],
+        [4121000, 20], [4221000, 20], [5121000, 20], [5221000, 20]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

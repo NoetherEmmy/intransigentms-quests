@@ -1,0 +1,41 @@
+# Custom quest, ID: 8001
+
+title = "Chasing Chewy Chocolate Charms and Choosing Chilly Chums"
+npc = "Ace of Hearts [Henesys]"
+info = """
+#eshivers#n
+
+I... I ran out of #bChocolate Cake#k. Again...
+
+And all of my friends left me."""
+
+
+[requirements]
+quests = [8000]
+predicates = [
+    """
+    function(p) {
+        return p.getLevel() >= 120;
+    }
+    """
+]
+
+
+[[items]]
+id = 2020019
+name = "Chocolate Cake"
+count = 3
+
+
+[par]
+fearless = 120
+valiant = 125
+adventuresome = 130
+
+
+[rewards]
+exp = 4335000
+mesos = 59000
+    [[rewards.items]]
+    id = 1902005
+    count = 1

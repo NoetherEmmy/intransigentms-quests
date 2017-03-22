@@ -1,0 +1,84 @@
+# Custom quest, ID: 10003
+
+title = "The Point Is To Change It"
+npc = "Trina [Orbis]"
+info = """
+#eappears to be busy being angry#n"""
+repeatable = true
+
+
+[requirements]
+predicates = [
+    """
+    var thisQuest = 10003;
+    var otherQuests = [10000, 10001, 10002];
+
+    function(p) {
+        if (!p.completedCQuest(thisQuest)) return true;
+        for (var i = 0; i < otherQuests.length; ++i) {
+            if (!p.completedCQuest(otherQuests[i])) return false;
+        }
+        return true;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8200010
+name = "Oblivion Monk Trainee"
+count = 50
+
+[[monsters]]
+id = 8200002
+name = "Memory Monk Trainee"
+count = 64
+
+[[monsters]]
+id = 8150201
+name = "Dark Cornian"
+count = 72
+
+
+[[items]]
+id = 1432030
+name = "Pinaka"
+count = 1
+
+[[items]]
+id = 1442044
+name = "Zedbug"
+count = 1
+
+[[items]]
+id = 1492012
+name = "Concerto"
+count = 1
+
+[[items]]
+id = 1452019
+name = "White Nisrock"
+count = 1
+
+[[items]]
+id = 1462015
+name = "White Neschere"
+count = 1
+
+
+[par]
+fearless = 122
+valiant = 129
+adventuresome = 136
+
+
+[rewards]
+exp = 5708000
+mesos = 91500
+    [[rewards.items]]
+    id = 4032134
+    count = 2
+
+    [[rewards.items]]
+    id = 5220000
+    count = 3

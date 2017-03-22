@@ -1,0 +1,37 @@
+# Custom quest, ID: 1016
+
+title = "Scouring A Spooky Cemetary"
+npc = "Midori [Showa Town]"
+info = """
+Hi. I'm not sure if you already knew this or not, but here in Zipangu we hold an event every year with both the people here in the Showa Town, and out west in the Mushroom Shrine called #rCandle's Day#k.
+
+I guess the name is a bit misleading; it lasts for 3 days. It's a mini-festival to honor death and the dead, so a lot of it is held in the cemetary. 
+
+Unfortunately, the cemetary is a bit more spooked this year than it normally is; it's not safe to hold the event there. So... I was wondering if maybe you could help clear it up?
+
+#b80 Nightghosts#k and #b40 Coolie Zombies#k should be enough."""
+
+
+[[monsters]]
+id = 9400003
+name = "Nightghost"
+count = 80
+
+[[monsters]]
+id = 5130107
+name = "Coolie Zombie"
+count = 40
+
+
+[par]
+fearless = 50
+valiant = 54
+adventuresome = 59
+
+
+[rewards]
+exp = 216000
+mesos = 44444
+    [[rewards.items]]
+    id = 5220000
+    count = 4

@@ -1,0 +1,94 @@
+# Custom quest, ID: 3003
+
+title = "Rather A Regression To One's Roots"
+npc = "Harmonia [Leafre: Forest of the Priest]"
+info = """
+Do you ever look at yourself now and think, "Am I really any better off now than I was?"
+
+I mean, like, there must be some things about being a wee little blob on the fresh face of Maple Island and the shores of Victoria Island that you miss. It's simpler, you know. Less things to worry about. Challenging but relaxing...
+
+I want you to go back -- for a time. Bring me #b200 Bubbling's Huge Bubbles#k and #b200 Pig's Ribbons#k. And while you're at it, kill #b200 Blue Snails#k and #b200 Green Mushrooms#k too."""
+
+
+[requirements]
+quests = [3000, 3001, 3002]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3221001, 30], [2121001, 30],
+        [2221001, 30], [2321001, 30],
+        [5121004, 20], [5221003, 30],
+        [4121004, 30], [4221004, 30],
+        [1221011, 20]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 100101
+name = "Blue Snail"
+count = 200
+
+[[monsters]]
+id = 1110100
+name = "Green Mushroom"
+count = 200
+
+
+[[items]]
+id = 4000037
+name = "Bubbling's Huge Bubble"
+count = 200
+
+[[items]]
+id = 4000002
+name = "Pig's Ribbon"
+count = 200
+
+
+[par]
+fearless = 50
+valiant = 94
+adventuresome = 130
+
+
+[rewards]
+exp = 4335000
+mesos = 201000
+    [[rewards.items]]
+    id = 4001126
+    count = 8
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3221001, 30], [2121001, 30],
+        [2221001, 30], [2321001, 30],
+        [5121004, 20], [5221003, 30],
+        [4121004, 30], [4221004, 30],
+        [1221011, 20]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

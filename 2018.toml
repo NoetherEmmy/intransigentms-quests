@@ -1,0 +1,34 @@
+# Custom quest, ID: 2018
+
+title = "A Nearby Nuclear Negligence"
+npc = "Mr. Noh [Korean Folk Town]"
+info = """
+Did you hear about the nearby nuclear leak just east of here?
+
+I fuckin' told those assholes to quit with the nuclear scheming, nuclear power this, nuclear that...
+
+Well it got into one of the water supplies that the foxes in that forest normally drink. And I think it's had its effects. The foxes have grown #ethree tails#n, and they're getting markedly more aggressive.
+
+In fact, just the other day Chil Nam had one of those fuckin' foxes crash into his rice paddy the other day and it stole half his harvest!
+
+I need you to get rid of this infestation. Go out and kill #b200 Samiho#k foxes so we can get rid of them once and for all."""
+
+
+[[monsters]]
+id = 5100004
+name = "Samiho"
+count = 200
+
+
+[par]
+fearless = 47
+valiant = 54
+adventuresome = 59
+
+
+[rewards]
+exp = 216000
+mesos = 35000
+    [[rewards.items]]
+    id = 5220000
+    count = 3

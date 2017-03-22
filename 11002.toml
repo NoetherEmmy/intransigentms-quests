@@ -1,0 +1,47 @@
+# Custom quest, ID: 11002
+
+title = "Ulu City Energy Thieves"
+npc = "Commando Jim [Ulu City Entrance]"
+info = """
+That was some quick work ya made of those Petri-dudes, kid. In fact, you cleared so much crap off those streets that we were able to make our way close enough to that wretched apartment building to make some preliminary observations.
+
+But I'm afraid there's a bit of a problem."""
+
+
+[requirements]
+quests = [11000, 11001]
+
+
+[[monsters]]
+id = 9420519
+name = "Duku"
+count = 100
+
+
+[[items]]
+id = 4000434
+name = "Rafflesia"
+count = 100
+
+[[items]]
+id = 4000385
+name = "Soul Lantern"
+count = 1
+
+
+[par]
+fearless = 104
+valiant = 111
+adventuresome = 121
+
+
+[rewards]
+exp = 2882000
+mesos = 1050000
+    [[rewards.items]]
+    id = 5220000
+    count = 2
+
+    [[rewards.items]]
+    id = 4031942
+    count = 1

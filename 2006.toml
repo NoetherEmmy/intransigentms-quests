@@ -1,0 +1,38 @@
+# Custom quest, ID: 2006
+
+title = "Icebyrd Slimm's Emergency Explosion Excavation"
+npc = "Icebyrd Slimm [New Leaf City]"
+info = """
+Hello there! If you don't mind, I could use a bit of help.
+
+You see, here in New Leaf City we pride ourselves on fiscal responsibility. As I hope you'll notice, the city is well planned, and when we have debts we pay them back.
+
+Unfortunately, due to some... unforeseen circumstances, we are running a bit short on funds to pay back a certain creditor. Luckily we have a backup plan. Our historians and scientists have located a very valuable ancient relic here in New Leaf City -- unfortunately by the time we found out its location we had already built the city on top of it.
+
+This is where you come in. I need at least #b35 boomer cores#k, which you can get from fighting the #bboomers#k around here, in order to excavate this relic using controlled explosions. If you can bring me those 35 cores, I have payment ready for you."""
+
+
+[[monsters]]
+id = 9400547
+name = "Boomer"
+count = 35
+
+
+[[items]]
+id = 4000391
+name = "Boomer Core"
+count = 35
+
+
+[par]
+fearless = 19
+valiant = 24
+adventuresome = 28
+
+
+[rewards]
+exp = 59500
+mesos = 29000
+    [[rewards.items]]
+    id = 5220000
+    count = 2

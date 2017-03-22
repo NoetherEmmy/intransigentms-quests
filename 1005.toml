@@ -1,0 +1,47 @@
+# Custom quest, ID: 1005
+
+title = "Delivering The Goods For Processing"
+npc = "Shane [Ellinia]"
+info = """
+Hey, kid. So, remember how last time I had you extract those um... #eingredients#n for me? Well, I hate to tell you this, but I don't actually make the stuff myself. I just distribute.
+
+Problem is, my usual nearby kitchen eggheads just got found out the other day. Whole operation was busted. But there's only one other place -- that I know of -- where I can get this made.
+
+This is where you come in, again. I need you to transport the ingredients to a kitchen near the depths of Sleepywood.
+
+I'm warning you, though. #rThere will be treacherous guardians blocking your way#k, and you will have to kill them to get through. You can come to me when you are ready to begin the delivery."""
+
+
+[requirements]
+quests = [1003]
+
+
+[[monsters]]
+id = 9500169
+name = "Jr. Balrog Guardian"
+count = 2
+
+
+[[items]]
+id = 4000009
+name = "Blue Mushroom Cap"
+count = 30
+
+[[items]]
+id = 2022000
+name = "Pure Water"
+count = 5
+
+
+[par]
+fearless = 20
+valiant = 24
+adventuresome = 27
+
+
+[rewards]
+exp = 31000
+mesos = 19000
+    [[rewards.items]]
+    id = 5220000
+    count = 3

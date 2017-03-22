@@ -1,0 +1,46 @@
+# Custom quest, ID: 2009
+
+title = "Swimming With The Seals"
+npc = "Alcaster [El Nath Market]"
+info = """
+Hello, there. You look pretty sturdy. You must be here for the #rE#kxploratory #rD#kivers of #rE#kl #rN#kath (#rEDEN#k).
+
+Well we're getting ready for our first expedition, but first we need to figure out the best way to send our people down into the ocean. We know from preliminary reports that at least one species of seal has made permanent residence in the #bAqua Road#k portion of the ocean, alongside a snorkeling avian species. We need to figure out exactly how they do it, and how we can emulate them in our expeditions.
+
+Your job will be to go down to #bAqua Road#k, and find these #bJr. Seals#k and #bScuba Pepes#k. Take from them #b40 Toy Baby Seals#k and #b60 Snorkles#k and bring them back here."""
+
+
+[[monsters]]
+id = 3230405
+name = "Jr. Seal"
+count = 40
+
+[[monsters]]
+id = 3210450
+name = "Scuba Pepe"
+count = 60
+
+
+[[items]]
+id = 4000154
+name = "Toy Baby Seal"
+count = 40
+
+[[items]]
+id = 4000153
+name = "Snorkle"
+count = 60
+
+
+[par]
+fearless = 32
+valiant = 36
+adventuresome = 40
+
+
+[rewards]
+exp = 89000
+mesos = 44500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

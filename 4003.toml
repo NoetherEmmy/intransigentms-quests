@@ -1,0 +1,114 @@
+# Custom quest, ID: 4003
+
+title = "Jangling Jewelry Jubilee"
+npc = "Legor [Leafre: Forest of the Priest]"
+info = """
+I have a #every#n important mission for you.
+
+I need you to get me #ba dozen of every kind of jewel ore#k.
+
+Yes, that's right. #bAmethyst ore, aquamarine ore, black crystal ore, diamond ore, emerald ore, garnet ore, opal ore, sapphire ore, and topaz ore.#k
+
+I need them for... very professional, serious-business kinds of things that we do here in Leafre, not, um, for a pretty necklace I can wear or anything. That would be selfish."""
+
+
+[requirements]
+quests = [4000, 4001, 4002]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3121008, 30], [2321005, 30], [5121010, 30], [4121006, 30],
+        [4221006, 30], [1320006, 20], [1220006, 30], [1120005, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[items]]
+id = 4020001
+name = "Amethyst Ore"
+count = 12
+
+[[items]]
+id = 4020002
+name = "Aquamarine Ore"
+count = 12
+
+[[items]]
+id = 4020000
+name = "Garnet Ore"
+count = 12
+
+[[items]]
+id = 4020003
+name = "Emerald Ore"
+count = 12
+
+[[items]]
+id = 4020004
+name = "Opal Ore"
+count = 12
+
+[[items]]
+id = 4020005
+name = "Sapphire Ore"
+count = 12
+
+[[items]]
+id = 4020006
+name = "Topaz Ore"
+count = 12
+
+[[items]]
+id = 4020007
+name = "Diamond Ore"
+count = 12
+
+[[items]]
+id = 4020008
+name = "Black Crystal Ore"
+count = 12
+
+
+[par]
+fearless = 250
+valiant = 999
+adventuresome = 999
+
+
+[rewards]
+exp = 3377000
+mesos = 195500
+    [[rewards.items]]
+    id = 4001126
+    count = 7
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3121008, 30], [2321005, 30], [5121010, 30], [4121006, 30],
+        [4221006, 30], [1320006, 20], [1220006, 30], [1120005, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

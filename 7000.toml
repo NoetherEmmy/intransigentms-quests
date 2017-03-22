@@ -1,0 +1,80 @@
+# Custom quest, ID: 7000
+
+title = "Divine Intervention Training"
+npc = "Gritto [Leafre: Forest of the Priest]"
+info = """
+So. You're a bishop now, eh? Think you're all tough, like a god, or something?
+
+Newsflash: You're not a god. At least, not yet.
+
+If you want the power to bring down divine intervention #ron command#k, you're gonna have to train with #eme#n for it.
+
+I'm going to need you to do #efour#n things for me.
+
+(1) Kill for me #b97 Red Wyverns#k and #b101 Blue Wyverns#k.
+(2) Bring me #b11 Wisdom Crystal Ore#k and #b11 Power Crystal Ore#k.
+(3) Go down below the depths of the Dead Mine and complete the #rjump quest#k for Zakum, so you can bring me back #b1 Breath of Lava#k.
+(4) Talk to #bHellin#k, who's right here with me, and take her #rquiz#k, and get back to me with the #bpresent#k she gives you."""
+
+
+[requirements]
+predicates = [
+    """
+    function(p) {
+        return p.getJob().getId() === 232;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8150300
+name = "Red Wyvern"
+count = 97
+
+[[monsters]]
+id = 8150301
+name = "Blue Wyvern"
+count = 101
+
+
+[[items]]
+id = 4004001
+name = "Wisdom Crystal Ore"
+count = 11
+
+[[items]]
+id = 4031062
+name = "Breath of Lava"
+count = 1
+
+[[items]]
+id = 4004000
+name = "Power Crystal Ore"
+count = 11
+
+[[items]]
+id = 4031521
+name = "Hanukkah Present"
+count = 1
+
+
+[par]
+fearless = 124
+valiant = 130
+adventuresome = 136
+
+
+[rewards]
+exp = 5708000
+mesos = 122500
+    [[rewards.items]]
+    id = 4001126
+    count = 8
+consumers = [
+    """
+    function(p) {
+        p.setMasterLevel(2321008, 10);
+    }
+    """
+]

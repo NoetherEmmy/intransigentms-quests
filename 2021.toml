@@ -1,0 +1,32 @@
+# Custom quest, ID: 2021
+
+title = "Mr. Pickall's Poorly, Plugged-Up Psyche"
+npc = "Mr. Pickall [Kerning City]"
+info = """
+#ethe strange sitting man glares at you as you pass by#n"""
+
+
+[[monsters]]
+id = 8200000
+name = "Eye of Time"
+count = 5
+
+
+[[items]]
+id = 4031303
+name = "Storage Key"
+count = 100
+
+
+[par]
+fearless = 69
+valiant = 76
+adventuresome = 82
+
+
+[rewards]
+exp = 530000
+mesos = 64000
+    [[rewards.items]]
+    id = 5220000
+    count = 4

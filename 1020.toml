@@ -1,0 +1,42 @@
+# Custom quest, ID: 1020
+
+title = "An Awful, Almost Always Attainable Aphrodisiac Arouses Actionable Activity"
+npc = "Dondlass [The Nautilus]"
+info = """
+#estands upright and puffs out chest to look tough as you walk past#n"""
+
+
+[[monsters]]
+id = 7130101
+name = "Taurospear"
+count = 80
+
+[[monsters]]
+id = 7130100
+name = "Tauromacis"
+count = 90
+
+
+[[items]]
+id = 4000046
+name = "Taurospear Horn"
+count = 100
+
+[[items]]
+id = 4000028
+name = "Tauromacis Horn"
+count = 100
+
+
+[par]
+fearless = 69
+valiant = 75
+adventuresome = 82
+
+
+[rewards]
+exp = 530000
+mesos = 80000
+    [[rewards.items]]
+    id = 5220000
+    count = 4

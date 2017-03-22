@@ -1,0 +1,32 @@
+# Custom quest, ID: 1008
+
+title = "The Toy Trojan Terror"
+npc = "Chico [Ludibrium Village]"
+info = """
+Hey. Kid. Whose side are you on?"""
+
+
+[[monsters]]
+id = 3230305
+name = "Toy Trojan"
+count = 100
+
+
+[[items]]
+id = 4000110
+name = "Toy Soldier Sword"
+count = 45
+
+
+[par]
+fearless = 36
+valiant = 39
+adventuresome = 44
+
+
+[rewards]
+exp = 213000
+mesos = 31500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

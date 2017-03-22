@@ -1,0 +1,56 @@
+# Custom quest, ID: 12001
+
+title = "Regrets Run Rampant"
+npc = "Temple Keeper [Time Lane: Three Doors]"
+info = """
+#ethe old man doesn't look up from his scroll to look at you#n
+
+Well, you've seen Memory Lane now, hm?
+
+#ethe old man adjusts his glasses and continues to read#n
+
+Was there anything you... felt like you wanted to change, perhaps?"""
+
+
+[requirements]
+quests = [12000]
+
+
+[[monsters]]
+id = 8200001
+name = "Memory Monk"
+count = 200
+
+[[monsters]]
+id = 8200002
+name = "Memory Monk Trainee"
+count = 200
+
+[[monsters]]
+id = 8200003
+name = "Memory Guardian"
+count = 200
+
+[[monsters]]
+id = 8200004
+name = "Chief Memory Guardian"
+count = 200
+
+[[monsters]]
+id = 8220004
+name = "Dodo"
+count = 1
+
+
+[par]
+fearless = 94
+valiant = 98
+adventuresome = 104
+
+
+[rewards]
+exp = 1353000
+mesos = 140000
+    [[rewards.items]]
+    id = 5220000
+    count = 5

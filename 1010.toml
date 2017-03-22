@@ -1,0 +1,38 @@
+# Custom quest, ID: 1010
+
+title = "Capturing A Chronological Cog"
+npc = "Document Roll [Ludibrium Village]"
+info = """
+Ah, der jou bist. I waes hoopian thaet jou wolde bie abak. I eallsew hoope jou ha getenn strenger sunts leste wy mette. I nedich jou te bringen mie abak an kronologyske Cog.
+
+Slean foar mie #b75 Platoon Chronoi#k, en bring abak #b1 Cog#k. De klok is allmaest finissed, I tink."""
+
+
+[requirements]
+quests = [1007]
+
+
+[[monsters]]
+id = 4230114
+name = "Platoon Chronos"
+count = 85
+
+
+[[items]]
+id = 4000115
+name = "Cog"
+count = 1
+
+
+[par]
+fearless = 34
+valiant = 39
+adventuresome = 45
+
+
+[rewards]
+exp = 123000
+mesos = 31500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

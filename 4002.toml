@@ -1,0 +1,100 @@
+# Custom quest, ID: 4002
+
+title = "Olympic Gold Medal In Mental Gymnastics"
+npc = "Legor [Leafre: Forest of the Priest]"
+info = """
+Well. Now that we've filled up your belly with all of that food, it's time to excercise the mind and soul.
+
+This training will consist of two things:
+
+(1) You will go and get #b4 Mind & Heart Medicines#k from a #bTae Roon#k.
+(2) You will talk to #bSamuel#k, who is right here next to me, and pass his #rquiz#k in order to get a #bFire Raccoon Eraser#k from him.
+
+Only if you bring me these two items will I know that you have completed your mental training."""
+
+
+[requirements]
+quests = [4000, 4001]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3121008, 20], [3221002, 30], [2121004, 30], [2221004, 30],
+        [2321004, 30], [5121010, 20], [5220001, 30], [4121006, 20],
+        [4221006, 20], [1120004, 30], [1220005, 30], [1320005, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 7220000
+name = "Tae Roon"
+count = 4
+
+
+[[items]]
+id = 2022142
+name = "Mind & Heart Medicine"
+count = 4
+
+[[items]]
+id = 4031520
+name = "New Year's Present"
+count = 1
+
+
+[par]
+fearless = 70
+valiant = 100
+adventuresome = 129
+
+
+[rewards]
+exp = 4142000
+mesos = 115500
+    [[rewards.items]]
+    id = 4001126
+    count = 7
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3121008, 20], [3221002, 30], [2121004, 30], [2221004, 30],
+        [2321004, 30], [5121010, 20], [5220001, 30], [4121006, 20],
+        [4221006, 20], [1120004, 30], [1220005, 30], [1320005, 30]
+    ];
+    var maplewarrior =
+    [
+        [1121000, 30], [1221000, 30], [1321000, 30], [2121000, 30],
+        [2221000, 30], [2321000, 30], [3121000, 30], [3221000, 30],
+        [4121000, 30], [4221000, 30], [5121000, 30], [5221000, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                break;
+            }
+        }
+        for (i = 0; i < maplewarrior.length; ++i) {
+            if (Math.floor(maplewarrior[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(maplewarrior[i][0], maplewarrior[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

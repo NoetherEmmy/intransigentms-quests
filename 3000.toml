@@ -1,0 +1,100 @@
+# Custom quest, ID: 3000
+
+title = "Strapped For Time"
+npc = "Harmonia [Leafre: Forest of the Priest]"
+info = """
+Hello, my child. I've been watching your progress develop since you were but a wee naked blob on the face of Maple Island, whether you knew it or not.
+
+It's apparent that you've become very powerful -- very quickly. So, now that you're all #ebig and bad#n, we'd like to ask you a favor.
+
+You see, as you've probably noticed, here in Leafre we are a bit... low-tech. I mean, realistically, there's just not a whole lot of public infrastructure for transportation or anything like that, really. I mean, I'm lucky any time I get to ride in one of the wooden carts pulled by the tamed Kentauri, and they aren't a very quick breed on their hooves.
+
+But we need to complete a task in Ludibrium nonetheless. Down in the depths of Ludibrium lie quite powerful monsters which have domain over the world of time. Normally this isn't a problem, but recently some of the leaders down there have started training adventurers like yourself in some... advanced chronological dark-arts. And we can't have that, I mean, we're supposed to be the ones with a monopoly on teaching humans weird tricks.
+
+So if you could just go down there and kill #bThanatos#k and #bGatekeeper#k, and bring me back #r2 Thanatos' Straps#k and #r2 Gatekeeper Armbands#k to prove it, I could reward you with further training.
+"""
+
+
+[requirements]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3121003, 30], [3221007, 20],
+        [2121007, 20], [2221007, 20],
+        [2321002, 30], [5121005, 20],
+        [5221003, 20], [4120005, 30],
+        [4220005, 30], [1121001, 30],
+        [1221001, 30], [1321001, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8170000
+name = "Thanatos"
+count = 3
+
+[[monsters]]
+id = 8160000
+name = "Gatekeeper"
+count = 3
+
+
+[[items]]
+id = 4000152
+name = "Thanatos' Strap"
+count = 2
+
+[[items]]
+id = 4000151
+name = "Gatekeeper Armband"
+count = 2
+
+
+[par]
+fearless = 123
+valiant = 128
+adventuresome = 133
+
+
+[rewards]
+exp = 4973000
+mesos = 99999
+    [[rewards.items]]
+    id = 4001126
+    count = 8
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3121003, 30], [3221007, 20],
+        [2121007, 20], [2221007, 20],
+        [2321002, 30], [5121005, 20],
+        [5221003, 20], [4120005, 30],
+        [4220005, 30], [1121001, 30],
+        [1221001, 30], [1321001, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

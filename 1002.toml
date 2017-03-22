@@ -1,0 +1,46 @@
+# Custom quest, ID: 1002
+
+title = "One Blood-Sucking Bandit Too Many"
+npc = "Mong from Kong [Kerning City]"
+info = """
+Jesus Christ, man. Have you heard? There's been another monsterous infestation down in the subway. #rTwo people died down there yesterday#k, man.
+
+Chief says we need to kill 'em off if we want to be able to use the subway ever again -- but Victorian Pest Control is too busy over in #bNew Leaf City#k. Something about spiders that look like wolves? I don't know. Freaks me out, man.
+
+Hey. What are you doing, anyways, walking around here with a weapon out and shit? Are you sure you're not here to #e#rkill#k#n the #dstirges#k and #dbubblings#k down there in the subway? I bet if you brought back #b32 Bubbling's Huge Bubbles#k and #b30 Stirge Wings#k, the chief would have a handsome reward for that."""
+
+
+[[monsters]]
+id = 1210103
+name = "Bubbling"
+count = 20
+
+[[monsters]]
+id = 2300100
+name = "Stirge"
+count = 16
+
+
+[[items]]
+id = 4000037
+name = "Bubbling's Huge Bubble"
+count = 32
+
+[[items]]
+id = 4000042
+name = "Stirge Wing"
+count = 30
+
+
+[par]
+fearless = 16
+valiant = 19
+adventuresome = 24
+
+
+[rewards]
+exp = 23600
+mesos = 20000
+    [[rewards.items]]
+    id = 5220000
+    count = 3

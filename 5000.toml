@@ -1,0 +1,83 @@
+# Custom quest, ID: 5000
+
+title = "Helping Hellin Help Herself"
+npc = "Hellin [Leafre: Forest of the Priest]"
+info = """
+#epssssst#n
+
+Hey. Kid.
+
+I need your help. You see, I realize that I'm here with all these big bad professor elf magic-people, but that's not really my jam. I actually don't know anything about fighting or magic or anything like that. I'm just here because I know a guy.
+
+But I was able to get some of the low-down on this magicky shit. Only problem now is, I need a bunch of that #bDark Crystal Ore#k to make myself more powerful. In fact, if my calculations are correct, I need exactly #b31 of 'em#k.
+
+But I just can't let
+
+#elooks around nervously#n
+
+these guys see me getting 'em. So... maybe you could help me out?"""
+
+
+[requirements]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3121007, 30], [3221006, 30],
+        [2121006, 30], [2221006, 30],
+        [5221009, 20], [4121003, 30],
+        [4221003, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[items]]
+id = 4004004
+name = "Dark Crystal Ore"
+count = 31
+
+
+[par]
+fearless = 250
+valiant = 999
+adventuresome = 999
+
+
+[rewards]
+exp = 2900000
+mesos = 118000
+    [[rewards.items]]
+    id = 4001126
+    count = 7
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3121007, 30], [3221006, 30],
+        [2121006, 30], [2221006, 30],
+        [5221009, 20], [4121003, 30],
+        [4221003, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

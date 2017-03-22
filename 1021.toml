@@ -1,0 +1,51 @@
+# Custom quest, ID: 1021
+
+title = "Bonnie Bones Up On Blowing Beautiful Bellows"
+npc = "Assistant Bonnie [Amoria]"
+info = """
+#esigh#n
+
+I... apologize for the terrible flute pun. I just hate being stuck out here...
+
+#escans surroundings and leans in to whisper#n
+
+(...with this Wayne guy. Real piece of work.)
+
+(Really, all I want to do is make some music; in any case, it might drown out some of the noise coming out of Wayne's mouth over here.)
+
+#emakes slight head jerking gesture towards Wayne#n
+
+(I used to play the flute, you know. Pretty well, too.)
+
+(That's... what I was hoping you could help me with.
+You see, I don't have anything to make a flute out of, and this entire town only sells full-sized god damn organs, with the whole wedding thing and all.)
+
+(So... I was wondering if you could get some bones for me so I can bone up on playing the boneflute. And maybe even a harp so that Wayne over here has something to play instead of running his mouth all day.)
+
+(All I really need is #b120 of Hankie's Pan Flutes#k, and for you to #bkill 80 Harps#k for Wayne's sake.)"""
+
+
+[[monsters]]
+id = 8140001
+name = "Harp"
+count = 80
+
+
+[[items]]
+id = 4000231
+name = "Hankie's Pan Flute"
+count = 120
+
+
+[par]
+fearless = 70
+valiant = 76
+adventuresome = 81
+
+
+[rewards]
+exp = 509000
+mesos = 76000
+    [[rewards.items]]
+    id = 5220000
+    count = 4

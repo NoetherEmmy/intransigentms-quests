@@ -1,0 +1,33 @@
+# Custom quest, ID: 2004
+
+title = "Waffles Weren't Meant To Last Forever"
+npc = "Chun Ji [Kerning City Construction Site]"
+info = """
+#eschniff
+
+soft weeping sounds can be heard#n"""
+
+
+[[monsters]]
+id = 3110300
+name = "Cube Slime"
+count = 3
+
+
+[[objectives]]
+name = "Place a waffle on Baekya's grave"
+count = 1
+
+
+[par]
+fearless = 28
+valiant = 33
+adventuresome = 37
+
+
+[rewards]
+exp = 72000
+mesos = 19500
+    [[rewards.items]]
+    id = 5220000
+    count = 4

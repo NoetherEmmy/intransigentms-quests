@@ -1,0 +1,39 @@
+# Custom quest, ID: 2010
+
+title = "Lost Love's Locked Lip Loosener"
+npc = "Mr. Sandman [Amoria]"
+info = """
+#eMmmmmmmmmmph#n
+
+#eMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMPH!#n"""
+
+
+[[monsters]]
+id = 9200515
+name = "Indigo Eye"
+count = 25
+
+[[monsters]]
+id = 9400516
+name = "Crystal Boar"
+count = 25
+
+
+[[items]]
+id = 4031593
+name = "Lip Lock Key"
+count = 60
+
+
+[par]
+fearless = 31
+valiant = 35
+adventuresome = 41
+
+
+[rewards]
+exp = 95000
+mesos = 30500
+    [[rewards.items]]
+    id = 5220000
+    count = 3

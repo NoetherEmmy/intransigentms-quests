@@ -1,0 +1,96 @@
+# Custom quest, ID: 3002
+
+title = "Feast Freezing Furnishings"
+npc = "Harmonia [Leafre: Forest of the Priest]"
+info = """
+Ok, well, we have quite a few leftovers from that huge feast we had for you.
+
+Unfortunately we aren't exactly used to having a lot of this surplus perishable stuff. We need something to refrigerate the bulk of it.
+
+That's why I'm sending you, as part of your next training, to go out and slay #b123 Cold Sharks#k, #b153 Ice Drakes#k, and collect #b93 Frozen Shark's Fins#k and #b123 Ice Backbones#k."""
+
+
+[requirements]
+quests = [3000, 3001]
+predicates = [
+    """
+    var rewardSkills =
+    [
+        [3121004, 30], [3221003, 30],
+        [2121003, 30], [2221003, 30],
+        [2321007, 30], [5121005, 30],
+        [5221004, 30], [4121007, 30],
+        [4221007, 30], [1221009, 30],
+        [1121008, 30]
+    ];
+
+    function(p) {
+        var rewardSkill;
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                rewardSkill = rewardSkills[i];
+                break;
+            }
+        }
+        return p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8150101
+name = "Cold Shark"
+count = 123
+
+[[monsters]]
+id = 6230600
+name = "Ice Drake"
+count = 153
+
+
+[[items]]
+id = 4000181
+name = "Frozen Shark's Fin"
+count = 93
+
+[[items]]
+id = 4000185
+name = "Ice Backbone"
+count = 123
+
+
+[par]
+fearless = 128
+valiant = 136
+adventuresome = 142
+
+
+[rewards]
+exp = 7534000
+mesos = 111000
+    [[rewards.items]]
+    id = 4001126
+    count = 6
+consumers = [
+    """
+    var rewardSkills =
+    [
+        [3121004, 30], [3221003, 30],
+        [2121003, 30], [2221003, 30],
+        [2321007, 30], [5121005, 30],
+        [5221004, 30], [4121007, 30],
+        [4221007, 30], [1221009, 30],
+        [1121008, 30]
+    ];
+
+    function(p) {
+        for (var i = 0; i < rewardSkills.length; ++i) {
+            if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
+                p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);
+                return;
+            }
+        }
+    }
+    """
+]

@@ -1,0 +1,59 @@
+# Custom quest, ID: 10000
+
+title = "Loving To Suck Warm Young Blood, It Kills Corpses"
+npc = "John Barricade [Bigger Ben: Lobby]"
+info = """
+Why hello there, good sir or ma'am!"""
+repeatable = true
+
+
+[requirements]
+predicates = [
+    """
+    var thisQuest = 10000;
+    var otherQuests = [10001, 10002, 10003];
+
+    function(p) {
+        if (!p.completedCQuest(thisQuest)) return true;
+        for (var i = 0; i < otherQuests.length; ++i) {
+            if (!p.completedCQuest(otherQuests[i])) return false;
+        }
+        return true;
+    }
+    """
+]
+
+
+[[monsters]]
+id = 8150201
+name = "Dark Cornian"
+count = 300
+
+[[monsters]]
+id = 9400580
+name = "Elderwraith"
+count = 100
+
+
+[[items]]
+id = 4032010
+name = "Elder Ashes"
+count = 16
+
+
+[par]
+fearless = 96
+valiant = 101
+adventuresome = 109
+
+
+[rewards]
+exp = 1686000
+mesos = 99000
+    [[rewards.items]]
+    id = 4032134
+    count = 2
+
+    [[rewards.items]]
+    id = 5220000
+    count = 3
