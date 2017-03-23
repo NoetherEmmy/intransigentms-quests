@@ -18,17 +18,17 @@ So if you could just go down there and kill #bThanatos#k and #bGatekeeper#k, and
 [requirements]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [3121003, 30], [3221007, 20],
-        [2121007, 20], [2221007, 20],
-        [2321002, 30], [5121005, 20],
-        [5221003, 20], [4120005, 30],
-        [4220005, 30], [1121001, 30],
-        [1221001, 30], [1321001, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121003, 30], [3221007, 20],
+            [2121007, 20], [2221007, 20],
+            [2321002, 30], [5121005, 20],
+            [5221003, 20], [4120005, 30],
+            [4220005, 30], [1121001, 30],
+            [1221001, 30], [1321001, 30]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -78,17 +78,17 @@ mesos = 99999
     count = 8
 consumers = [
     """
-    var rewardSkills =
-    [
-        [3121003, 30], [3221007, 20],
-        [2121007, 20], [2221007, 20],
-        [2321002, 30], [5121005, 20],
-        [5221003, 20], [4120005, 30],
-        [4220005, 30], [1121001, 30],
-        [1221001, 30], [1321001, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121003, 30], [3221007, 20],
+            [2121007, 20], [2221007, 20],
+            [2321002, 30], [5121005, 20],
+            [5221003, 20], [4120005, 30],
+            [4220005, 30], [1121001, 30],
+            [1221001, 30], [1321001, 30]
+        ];
+
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
                 p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);

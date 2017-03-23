@@ -21,15 +21,15 @@ these guys see me getting 'em. So... maybe you could help me out?"""
 [requirements]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [3121007, 30], [3221006, 30],
-        [2121006, 30], [2221006, 30],
-        [5221009, 20], [4121003, 30],
-        [4221003, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121007, 30], [3221006, 30],
+            [2121006, 30], [2221006, 30],
+            [5221009, 20], [4121003, 30],
+            [4221003, 30]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -63,15 +63,15 @@ mesos = 118000
     count = 7
 consumers = [
     """
-    var rewardSkills =
-    [
-        [3121007, 30], [3221006, 30],
-        [2121006, 30], [2221006, 30],
-        [5221009, 20], [4121003, 30],
-        [4221003, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121007, 30], [3221006, 30],
+            [2121006, 30], [2221006, 30],
+            [5221009, 20], [4121003, 30],
+            [4221003, 30]
+        ];
+
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
                 p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);

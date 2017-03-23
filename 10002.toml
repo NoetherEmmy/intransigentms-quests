@@ -14,10 +14,10 @@ repeatable = true
 [requirements]
 predicates = [
     """
-    var thisQuest = 10002;
-    var otherQuests = [10000, 10001, 10003];
-
     function(p) {
+        var thisQuest = 10002;
+        var otherQuests = [10000, 10001, 10003];
+
         if (!p.completedCQuest(thisQuest)) return true;
         for (var i = 0; i < otherQuests.length; ++i) {
             if (!p.completedCQuest(otherQuests[i])) return false;

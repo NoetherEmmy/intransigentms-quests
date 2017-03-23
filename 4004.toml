@@ -18,13 +18,13 @@ The problem is, sometimes he just gets a bit #etoo#n out of control. So we need 
 quests = [4000, 4001, 4002, 4003]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [1320006, 30], [1221004, 20],
-        [1121010, 20]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [1320006, 30], [1221004, 20],
+            [1121010, 20]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -64,13 +64,13 @@ mesos = 175000
     count = 8
 consumers = [
     """
-    var rewardSkills =
-    [
-        [1320006, 30], [1221004, 20],
-        [1121010, 20]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [1320006, 30], [1221004, 20],
+            [1121010, 20]
+        ];
+
         var reward;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {

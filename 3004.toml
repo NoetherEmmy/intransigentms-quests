@@ -14,15 +14,15 @@ Oh, and #edon't die#n."""
 quests = [3000, 3001, 3002, 3003]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [3220004, 30], [2121007, 30],
-        [2221007, 30], [2321008, 30],
-        [5121004, 30], [5221007, 20],
-        [4121008, 30], [1221011, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3220004, 30], [2121007, 30],
+            [2221007, 30], [2321008, 30],
+            [5121004, 30], [5221007, 20],
+            [4121008, 30], [1221011, 30]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -62,15 +62,15 @@ mesos = 101000
     count = 8
 consumers = [
     """
-    var rewardSkills =
-    [
-        [3220004, 30], [2121007, 30],
-        [2221007, 30], [2321008, 30],
-        [5121004, 30], [5221007, 20],
-        [4121008, 30], [1221011, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3220004, 30], [2121007, 30],
+            [2221007, 30], [2321008, 30],
+            [5121004, 30], [5221007, 20],
+            [4121008, 30], [1221011, 30]
+        ];
+
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
                 p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);

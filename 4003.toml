@@ -16,13 +16,13 @@ I need them for... very professional, serious-business kinds of things that we d
 quests = [4000, 4001, 4002]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [3121008, 30], [2321005, 30], [5121010, 30], [4121006, 30],
-        [4221006, 30], [1320006, 20], [1220006, 30], [1120005, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121008, 30], [2321005, 30], [5121010, 30], [4121006, 30],
+            [4221006, 30], [1320006, 20], [1220006, 30], [1120005, 30]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -96,13 +96,13 @@ mesos = 195500
     count = 7
 consumers = [
     """
-    var rewardSkills =
-    [
-        [3121008, 30], [2321005, 30], [5121010, 30], [4121006, 30],
-        [4221006, 30], [1320006, 20], [1220006, 30], [1120005, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121008, 30], [2321005, 30], [5121010, 30], [4121006, 30],
+            [4221006, 30], [1320006, 20], [1220006, 30], [1120005, 30]
+        ];
+
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
                 p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);

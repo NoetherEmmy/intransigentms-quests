@@ -14,17 +14,17 @@ That's why I'm sending you, as part of your next training, to go out and slay #b
 quests = [3000, 3001]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [3121004, 30], [3221003, 30],
-        [2121003, 30], [2221003, 30],
-        [2321007, 30], [5121005, 30],
-        [5221004, 30], [4121007, 30],
-        [4221007, 30], [1221009, 30],
-        [1121008, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121004, 30], [3221003, 30],
+            [2121003, 30], [2221003, 30],
+            [2321007, 30], [5121005, 30],
+            [5221004, 30], [4121007, 30],
+            [4221007, 30], [1221009, 30],
+            [1121008, 30]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -74,17 +74,17 @@ mesos = 111000
     count = 6
 consumers = [
     """
-    var rewardSkills =
-    [
-        [3121004, 30], [3221003, 30],
-        [2121003, 30], [2221003, 30],
-        [2321007, 30], [5121005, 30],
-        [5221004, 30], [4121007, 30],
-        [4221007, 30], [1221009, 30],
-        [1121008, 30]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121004, 30], [3221003, 30],
+            [2121003, 30], [2221003, 30],
+            [2321007, 30], [5121005, 30],
+            [5221004, 30], [4121007, 30],
+            [4221007, 30], [1221009, 30],
+            [1121008, 30]
+        ];
+
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
                 p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);

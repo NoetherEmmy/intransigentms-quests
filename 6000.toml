@@ -15,15 +15,15 @@ That's why I'm sending out out to gather for me #b80 Yellow Toy Blocks#k, #b80 B
 [requirements]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [3121006, 30], [3221005, 30],
-        [2321003, 20], [2221005, 30],
-        [2121005, 30], [5220002, 20],
-        [1320008, 25]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121006, 30], [3221005, 30],
+            [2321003, 20], [2221005, 30],
+            [2121005, 30], [5220002, 20],
+            [1320008, 25]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -93,15 +93,15 @@ mesos = 120000
     count = 7
 consumers = [
     """
-    var rewardSkills =
-    [
-        [3121006, 30], [3221005, 30],
-        [2321003, 20], [2221005, 30],
-        [2121005, 30], [5220002, 20],
-        [1320008, 25]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [3121006, 30], [3221005, 30],
+            [2321003, 20], [2221005, 30],
+            [2121005, 30], [5220002, 20],
+            [1320008, 25]
+        ];
+
         var reward;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {

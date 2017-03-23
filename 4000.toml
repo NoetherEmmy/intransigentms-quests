@@ -17,14 +17,14 @@ Yeah, that should do it."""
 [requirements]
 predicates = [
     """
-    var rewardSkills =
-    [
-        [1121000, 20], [1221000, 20], [1321000, 20], [2121000, 20],
-        [2221000, 20], [2321000, 20], [3121000, 20], [3221000, 20],
-        [4121000, 20], [4221000, 20], [5121000, 20], [5221000, 20]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [1121000, 20], [1221000, 20], [1321000, 20], [2121000, 20],
+            [2221000, 20], [2321000, 20], [3121000, 20], [3221000, 20],
+            [4121000, 20], [4221000, 20], [5121000, 20], [5221000, 20]
+        ];
+
         var rewardSkill;
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
@@ -32,6 +32,7 @@ predicates = [
                 break;
             }
         }
+
         return rewardSkill !== undefined && p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
     }
     """
@@ -283,14 +284,14 @@ mesos = 144000
     count = 9
 consumers = [
     """
-    var rewardSkills =
-    [
-        [1121000, 20], [1221000, 20], [1321000, 20], [2121000, 20],
-        [2221000, 20], [2321000, 20], [3121000, 20], [3221000, 20],
-        [4121000, 20], [4221000, 20], [5121000, 20], [5221000, 20]
-    ];
-
     function(p) {
+        var rewardSkills =
+        [
+            [1121000, 20], [1221000, 20], [1321000, 20], [2121000, 20],
+            [2221000, 20], [2321000, 20], [3121000, 20], [3221000, 20],
+            [4121000, 20], [4221000, 20], [5121000, 20], [5221000, 20]
+        ];
+
         for (var i = 0; i < rewardSkills.length; ++i) {
             if (Math.floor(rewardSkills[i][0] / 10000) === p.getJob().getId()) {
                 p.setMasterLevel(rewardSkills[i][0], rewardSkills[i][1]);

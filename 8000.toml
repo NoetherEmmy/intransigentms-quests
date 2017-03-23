@@ -16,9 +16,8 @@ Look, friend, I -- I need a little help here.
 predicates = [
     """
     function(p) {
-        return
-            p.getLevel() >= 120 &&
-            p.getItemQuantity(1902001, true) > 0;
+        return p.getLevel() >= 120 &&
+               p.getItemQuantity(1902001, true) > 0;
     }
     """
 ]
