@@ -279,9 +279,6 @@ adventuresome = 170
 [rewards]
 exp = 26000000
 mesos = 144000
-    [[rewards.items]]
-    id = 4001126
-    count = 9
 consumers = [
     """
     function(p) {
@@ -301,3 +298,6 @@ consumers = [
     }
     """
 ]
+    [[rewards.items]]
+    id = 4001126
+    count = 9
