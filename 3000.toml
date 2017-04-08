@@ -11,8 +11,7 @@ You see, as you've probably noticed, here in Leafre we are a bit... low-tech. I 
 
 But we need to complete a task in Ludibrium nonetheless. Down in the depths of Ludibrium lie quite powerful monsters which have domain over the world of time. Normally this isn't a problem, but recently some of the leaders down there have started training adventurers like yourself in some... advanced chronological dark-arts. And we can't have that, I mean, we're supposed to be the ones with a monopoly on teaching humans weird tricks.
 
-So if you could just go down there and kill #bThanatos#k and #bGatekeeper#k, and bring me back #r2 Thanatos' Straps#k and #r2 Gatekeeper Armbands#k to prove it, I could reward you with further training.
-"""
+So if you could just go down there and kill #bThanatos#k and #bGatekeeper#k, and bring me back #r2 Thanatos' Straps#k and #r2 Gatekeeper Armbands#k to prove it, I could reward you with further training."""
 
 
 [requirements]
@@ -36,7 +35,7 @@ predicates = [
                 break;
             }
         }
-        return rewardSkill !== undefined && p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+        return rewardSkill === undefined || p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
     }
     """
 ]

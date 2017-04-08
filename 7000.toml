@@ -21,7 +21,9 @@ I'm going to need you to do #efour#n things for me.
 predicates = [
     """
     function(p) {
-        return p.getJob().getId() === 232;
+        return p.getJob().getId() !== 200 &&
+               p.getJob().getId() !== 230 &&
+               p.getJob().getId() !== 231;
     }
     """
 ]
@@ -71,7 +73,7 @@ mesos = 122500
 consumers = [
     """
     function(p) {
-        p.setMasterLevel(2321008, 10);
+        if (p.getJob().getId() === 232) p.setMasterLevel(2321008, 10);
     }
     """
 ]

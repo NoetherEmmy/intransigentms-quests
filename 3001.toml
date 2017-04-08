@@ -13,8 +13,7 @@ Really, we just wanted their armlets so we could harvest the powers that they ha
 
 But hey, don't they have, like, a saying in your language? Goes something like... "You can't make an armlet without breaking a few eggs."
 
-Something like that. Anyways, we need to make this armlet, so we need you to collect for us #b100 Egg Shells#k, #b90 Broken Horns#k, and kill for us #b130 Skelosaura#k and #b150 Red Dragon Turtles#k.
-"""
+Something like that. Anyways, we need to make this armlet, so we need you to collect for us #b100 Egg Shells#k, #b90 Broken Horns#k, and kill for us #b130 Skelosaura#k and #b150 Red Dragon Turtles#k."""
 
 
 [requirements]
@@ -39,7 +38,7 @@ predicates = [
                 break;
             }
         }
-        return rewardSkill !== undefined && p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+        return rewardSkill === undefined || p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
     }
     """
 ]

@@ -33,7 +33,7 @@ predicates = [
             }
         }
 
-        return rewardSkill !== undefined && p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+        return rewardSkill === undefined || p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
     }
     """
 ]

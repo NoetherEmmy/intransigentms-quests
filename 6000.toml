@@ -31,7 +31,7 @@ predicates = [
                 break;
             }
         }
-        return rewardSkill !== undefined && p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
+        return rewardSkill === undefined || p.getMasterLevelById(rewardSkill[0]) >= rewardSkill[1] - 10;
     }
     """
 ]
@@ -107,10 +107,12 @@ consumers = [
                 break;
             }
         }
-        if (reward[0] === 2321003) {
-            p.setMasterLevel(reward[0], reward[1] + 10);
-        } else if (reward[0] === 1320008) {
-            p.setMasterLevel(reward[0] + 1, reward[1]);
+        if (reward) {
+            if (reward[0] === 2321003) {
+                p.setMasterLevel(reward[0], reward[1] + 10);
+            } else if (reward[0] === 1320008) {
+                p.setMasterLevel(reward[0] + 1, reward[1]);
+            }
         }
     }
     """

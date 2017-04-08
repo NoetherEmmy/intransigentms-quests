@@ -14,13 +14,6 @@ Go out and fight for me #b274 Grim Phantom Watches#k and #b1 Griffey#k, and brin
 
 [requirements]
 quests = [7000]
-predicates = [
-    """
-    function(p) {
-        return p.getJob().getId() === 232;
-    }
-    """
-]
 
 
 [[monsters]]
@@ -57,7 +50,7 @@ mesos = 112500
 consumers = [
     """
     function(p) {
-        p.setMasterLevel(2321006, 10);
+        if (p.getJob().getId() === 232) p.setMasterLevel(2321006, 10);
     }
     """
 ]
