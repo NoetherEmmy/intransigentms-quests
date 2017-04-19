@@ -37,7 +37,7 @@ adventuresome = 37
 
 
 [rewards]
-exp = 57500
+exp = 69000
 mesos = 19000
     [[rewards.items]]
     id = 5220000

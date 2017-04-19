@@ -56,7 +56,7 @@ adventuresome = 140
 
 
 [rewards]
-exp = 6864000
+exp = 8236800
 mesos = 185000
 consumers = [
     """

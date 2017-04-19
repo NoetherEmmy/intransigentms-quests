@@ -92,13 +92,12 @@ consumers = [
             "net.sf.odinms.scripting.AbstractPlayerInteraction"
         );
 
-    var rewards =
-    [
-        3991029, 4031455, 1472062, 4031750,
-        1452002, 1322014
-    ];
-
     function(p) {
+        var rewards =
+        [
+            3991029, 4031455, 1472062, 4031750,
+            1452002, 1322014
+        ];
         var api = new AbstractPlayerInteraction(p.getClient());
         var randReward = rewards[Math.floor(Math.random() * rewards.length)];
 
